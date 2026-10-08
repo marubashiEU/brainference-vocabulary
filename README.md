@@ -26,7 +26,7 @@ Switch back to the bundled vocabulary with `sema use --default`.
 
 After `sema use brainference`, `sema root` must print the same semantic and catalog roots.
 
-The release assets (`library.json` and `brainference-patterns-1.0.0.zip`) are on the [releases page](https://github.com/marubashiEU/sema-brainference/releases). They are immutable: changes ship as a new version. [`patterns/`](patterns) holds the same pattern JSON as readable source.
+The release assets (`library.json` and `brainference-patterns-1.0.0.zip`) are on the [releases page](https://github.com/marubashiEU/brainference-vocabulary/releases). They are immutable: changes ship as a new version. [`patterns/`](patterns) holds the same pattern JSON as readable source.
 
 ## Patterns
 
