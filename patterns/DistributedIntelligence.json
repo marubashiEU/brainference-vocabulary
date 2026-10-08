@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "path": [
+      "Society",
+      "Coordination"
+    ],
+    "ring": 0,
+    "source": "main page ('our insights': the future of intelligence is distributed; vision); research/harness_bodies_death (swarms, hierarchies)",
+    "tier": 2
+  },
+  "dependencies": {
+    "composes_with": {
+      "coordinator_lane_topology": "sema:CoordinatorLaneTopology#mh:SHA-256:7e8603daa3abea68c1b860ffbf8839fa5b2f3354f09a14bf9e12bd0554cfd8a0"
+    },
+    "references": {
+      "local_learning_rule": "sema:LocalLearningRule#mh:SHA-256:0ab320636ba6462ceb5c334a434578cd4f75e7af08db6ef6e220adb48926477f",
+      "prediction_error_minimization": "sema:PredictionErrorMinimization#mh:SHA-256:5a5c8ef472f994f11d8aba5b5c9b40b6c96fea601efab2838cc73ba734244fcc",
+      "self_organisation": "sema:SelfOrganisation#mh:SHA-256:efc9067bfdfea22ceeed9dba82eb6e4c949a232ddf96fd8c20d07e4f51e03886"
+    }
+  },
+  "failure_modes": [
+    "Model style convergence: instances too similar to hold different information",
+    "Exchanges without selection flood each instance with noise",
+    "A hub instance quietly becomes a central controller",
+    "Unstructured swarm: with no orchestration, internal bureaucracy grows and the swarm slowly reinvents the structure it could have been given; light structure such as {{coordinator_lane_topology}} is far more efficient"
+  ],
+  "gloss": "Many model instances selectively exchange information to reduce uncertainty about their environments",
+  "handle": "DistributedIntelligence",
+  "invariants": [
+    "Each instance acts on local information plus what others choose to share",
+    "No single instance holds or controls the collective model"
+  ],
+  "mechanism": "Different instantiations of similar models, each updating by a {{local_learning_rule}}, selectively exchange and interpret each other's information to reduce uncertainty about their environments, each practising {{prediction_error_minimization}}. No instance holds the whole picture. The collective capability is an instance of {{self_organisation}}: it arises from the exchanges and is not specified by any one instance.",
+  "sema_category": "Coordination",
+  "sema_id": "sema:DistributedIntelligence#mh:SHA-256:3aa5a87f1a342b5c09df148bc552e7833950cdd53c8bac425c50685822b15aeb",
+  "sema_layer": "Society",
+  "sema_ref": "DistributedIntelligence#3aa5",
+  "sema_stub": "3aa5"
+}

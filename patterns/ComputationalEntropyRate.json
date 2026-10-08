@@ -1,0 +1,32 @@
+{
+  "_meta": {
+    "path": [
+      "Infrastructure",
+      "Primitives"
+    ],
+    "ring": 2,
+    "source": "book/on_the_origin_of_risk (Timlett 2025), ch. 16 (Equations 1-3), Technical appendix I (fast stressor metrics)",
+    "tier": 1
+  },
+  "dependencies": {
+    "accepts": {
+      "computational_channel": "sema:ComputationalChannel#mh:SHA-256:4dbe50ab8b0edb70fa56a2db1c32fd83298f6813dc8972290cadd678e6c69336"
+    }
+  },
+  "failure_modes": [
+    "Driving the rate to 1 by accepting everything and losing the criteria the channel enforces",
+    "Comparing rates across channels without checking whether their acceptors apply the same criteria"
+  ],
+  "gloss": "Bits submitted per bit accepted in a computational channel, a measure of work done rather than noise",
+  "handle": "ComputationalEntropyRate",
+  "invariants": [
+    "The entropy rate is at least 1, and equals 1 only when nothing is rejected",
+    "The rate depends on both languages, not on the acceptor alone"
+  ],
+  "mechanism": "For a {{computational_channel}} observed over a period, count inputs and bits. The input flow rate is inputs accepted divided by inputs submitted. The bit flow rate is bits accepted divided by bits submitted. The computational entropy rate is bits submitted divided by bits accepted, the inverse of the bit flow rate: if 66% of submitted bits are accepted, about 1.5 bits are submitted for every bit accepted. In Shannon's theory a higher rate signals noise. Here a higher rate means the channel is doing more computational work, applying more criteria, like a crossword whose entries must satisfy crossing words. Measured frequently, for example today's rejected password attempts, the rate is a fast metric of stress on the system.",
+  "sema_category": "Primitives",
+  "sema_id": "sema:ComputationalEntropyRate#mh:SHA-256:ae56eadfb0597b90bbe3a15cefe085d58d5878d1f7d0ee94c7a1525c7ae241d9",
+  "sema_layer": "Infrastructure",
+  "sema_ref": "ComputationalEntropyRate#ae56",
+  "sema_stub": "ae56"
+}

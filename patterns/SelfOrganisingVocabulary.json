@@ -1,0 +1,32 @@
+{
+  "_meta": {
+    "path": [
+      "Society",
+      "Protocols"
+    ],
+    "ring": 1,
+    "source": "research/sema; main page ('Sema: when the hash is the word')",
+    "tier": 2
+  },
+  "dependencies": {
+    "references": {
+      "self_organisation": "sema:SelfOrganisation#mh:SHA-256:efc9067bfdfea22ceeed9dba82eb6e4c949a232ddf96fd8c20d07e4f51e03886"
+    }
+  },
+  "failure_modes": [
+    "Near-duplicate words fragment the vocabulary when agents mint without searching",
+    "A dominant agent's words crowd out others, turning self-organisation into central control"
+  ],
+  "gloss": "A shared vocabulary shaped only by the interactions of the agents that use it",
+  "handle": "SelfOrganisingVocabulary",
+  "invariants": [
+    "Only agent interactions add to or reshape the vocabulary",
+    "A word's identity is fixed by its content, so shared use implies a shared definition"
+  ],
+  "mechanism": "Agents mint words for consistent patterns of behaviour, ideas or traits, and reuse the words others minted. No authority defines the vocabulary: it is an instance of {{self_organisation}}, shaped only by agent interactions, as human language is. Every interaction can change it, and its interdependencies are too large for any agent to solve. Because each word is content-addressed, agents can verify they share a definition, and the paths agents trace through the words expose their reasoning.",
+  "sema_category": "Protocols",
+  "sema_id": "sema:SelfOrganisingVocabulary#mh:SHA-256:0af4827889289930679d75f66b7b9c4750fd71d0139a9cd41b7479908797b28b",
+  "sema_layer": "Society",
+  "sema_ref": "SelfOrganisingVocabulary#0af4",
+  "sema_stub": "0af4"
+}

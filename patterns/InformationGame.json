@@ -1,0 +1,35 @@
+{
+  "_meta": {
+    "path": [
+      "Society",
+      "Coordination"
+    ],
+    "ring": 1,
+    "source": "research/complexity_epistemology (games of information, complexity); research/what_is_complexity (Arne)",
+    "tier": 1
+  },
+  "dependencies": {
+    "references": {
+      "bounded_model_open_world": "sema:BoundedModelOpenWorld#mh:SHA-256:a33485666a4c67900ff103d12c3629590481489d73350ebc122bc15bb5419661",
+      "computational_irreducibility": "sema:ComputationalIrreducibility#mh:SHA-256:77eaaa0cb7d5fdf22915b2147d1a9b4061acdd4f45c5297dd8c60ac5bf2fa7f7",
+      "model_as_compression": "sema:ModelAsCompression#mh:SHA-256:265d6bf16579e276ca74ec7f344c57e683d83d7df896794529a96d088ed2e54f"
+    }
+  },
+  "failure_modes": [
+    "Treating a game of information as a physical forecasting problem that more data would solve",
+    "Ignoring one's own effect on the environment being modelled"
+  ],
+  "gloss": "Intelligences modelling each other modelling them, where the missing information is a property of the system",
+  "handle": "InformationGame",
+  "invariants": [
+    "Publishing a prediction can change the behaviour it predicts",
+    "The only prediction immune to reflexivity is a self-fulfilling one",
+    "Measuring an agent's state can alter it"
+  ],
+  "mechanism": "When autonomous agents model each other's perceptions and intentions, and model the others modelling them, the regress has no fixed point. Three dynamics mark the situation: it changes before it can be analysed in full, a special case of {{computational_irreducibility}}; crucial information cannot be obtained without disturbing the system; and predictions change the outcomes they predict. Here {{bounded_model_open_world}} is not a practical limit but structural. Each {{model_as_compression}} of another agent becomes an input that agent can react to.",
+  "sema_category": "Coordination",
+  "sema_id": "sema:InformationGame#mh:SHA-256:132e36dd53b27e92c7ee60c7adef8cbfa312580084ed255883f6b9182228ffe0",
+  "sema_layer": "Society",
+  "sema_ref": "InformationGame#132e",
+  "sema_stub": "132e"
+}

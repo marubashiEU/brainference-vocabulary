@@ -1,0 +1,32 @@
+{
+  "_meta": {
+    "path": [
+      "Infrastructure",
+      "Verification"
+    ],
+    "ring": 1,
+    "source": "thesis/do_2026_ant_collective_behavior (Ch. 3.3; Ch. 4.2.2-4.2.3; Appendix A.1-A.3: ICC, block permutation, GEE)",
+    "tier": 1
+  },
+  "failure_modes": [
+    "Pseudoreplication: treating 60 windows per sample as 60 independent points and reporting tiny p-values from a handful of colonies",
+    "Axis-aligned tests only: GEE on each coordinate misses groups that separate along an oblique direction",
+    "Few clusters: with three or four samples per group, even correct cluster-level tests have little power and permutation p-values have a coarse floor"
+  ],
+  "gloss": "Many windows from few samples are not many samples: test at the level where independence holds",
+  "handle": "ClusteredObservationTesting",
+  "invariants": [
+    "Labels are permuted or resampled at the level of the independent unit (the sample), not the window",
+    "Between-sample variance (ICC) is reported alongside any group difference",
+    "The test respects the same grouping that the data collection imposed"
+  ],
+  "mechanism": "Sliding windows over a recording yield many observations, but windows from the same sample (colony, subject, session) share its identity and history and are not independent. First measure how much variance sits between samples with the intraclass correlation coefficient (ICC); a high ICC means apparent clusters may just be sample identity. Then test group differences with methods that respect the clustering: generalised estimating equations (GEE) with sample as cluster and a multivariate Wald test for the joint effect, followed by pairwise contrasts; or block permutation tests that shuffle group labels between whole samples, never between windows. Quantify parameter uncertainty by bootstrap resampling. The effective sample size is closer to the number of samples than to the number of windows.",
+  "preconditions": [
+    "Each observation can be assigned to the sample it came from"
+  ],
+  "sema_category": "Verification",
+  "sema_id": "sema:ClusteredObservationTesting#mh:SHA-256:5f8e39deca5c4095ede80f05bb368d0ded5efb22e397d75aad53ce7d217866cf",
+  "sema_layer": "Infrastructure",
+  "sema_ref": "ClusteredObservationTesting#5f8e",
+  "sema_stub": "5f8e"
+}

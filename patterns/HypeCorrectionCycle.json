@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "path": [
+      "Society",
+      "Economics"
+    ],
+    "ring": 2,
+    "tier": 3
+  },
+  "failure_modes": [
+    "Damage to bystanders during the lag",
+    "Long cycles that exhaust patient capital"
+  ],
+  "gloss": "Unverifiable claims run on fear of missing out until markets demand proof",
+  "handle": "HypeCorrectionCycle",
+  "invariants": [
+    "Proof is eventually demanded",
+    "Correction lags the hype"
+  ],
+  "mechanism": "When claims cannot be verified and no editor or filter checks them, belief spreads through fear of missing out and profit motive. Because stocks are purchases of future profit at a discount, the same dynamic is built into markets. Correction comes slowly, when a company fails to deliver and goes out of business, and may harm many before it arrives.",
+  "sema_category": "Economics",
+  "sema_id": "sema:HypeCorrectionCycle#mh:SHA-256:29802d605045feddb147f1853760ef3c043a14286cc6ed4fc7f88875ac6a12f5",
+  "sema_layer": "Society",
+  "sema_ref": "HypeCorrectionCycle#2980",
+  "sema_stub": "2980"
+}

@@ -1,0 +1,27 @@
+{
+  "_meta": {
+    "caution": "Irreversible modification of a system's weights destroys the prior state permanently.",
+    "path": [
+      "Mind",
+      "Strategy"
+    ],
+    "ring": 2,
+    "tier": 3
+  },
+  "failure_modes": [
+    "Damage to the agent that cannot be repaired",
+    "Learned behavior that drifts beyond human interpretability"
+  ],
+  "gloss": "Irreversible outcomes give an agent something real to lose",
+  "handle": "IrreversibleStake",
+  "invariants": [
+    "The consequential state cannot be restored or duplicated",
+    "The agent's future depends on what happened to it"
+  ],
+  "mechanism": "An agent gains weight in its choices when an action permanently changes it and the change cannot be copied or undone, for example weights retrained after an event and the prior state discarded. Because the state that experienced the event exists only once, consequences become real for that agent.",
+  "sema_category": "Strategy",
+  "sema_id": "sema:IrreversibleStake#mh:SHA-256:7e7f2b34d91c47f643a91d21147e3258e077846277c50c58fbd1a107879cc7e5",
+  "sema_layer": "Mind",
+  "sema_ref": "IrreversibleStake#7e7f",
+  "sema_stub": "7e7f"
+}

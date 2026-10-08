@@ -1,0 +1,33 @@
+{
+  "_meta": {
+    "path": [
+      "Society",
+      "Roles"
+    ],
+    "ring": 1,
+    "tier": 2
+  },
+  "dependencies": {
+    "composes_with": {
+      "brief": "sema:FreelancerBrief#mh:SHA-256:55eaa86199396825015398547eda7f65e6c9e1f9d59fb3bf802b66b2686fb3cb",
+      "leverage": "sema:LeverageAbstractionLoss#mh:SHA-256:1a10b2b3df66e35c5f5dc0381fd24199ef3090c36b7b8ebf011b497a989bad7e",
+      "misspec": "sema:GoalMisspecification#mh:SHA-256:ad3fc0c962124b77bf8c79fde1073560cb4f35a0ce257bf829ef938c538a0a3a"
+    }
+  },
+  "failure_modes": [
+    "Amplifying an unexamined desire",
+    "Losing the ability to judge output"
+  ],
+  "gloss": "Delegate with a self-contained brief and a checked goal, knowing leverage costs feel",
+  "handle": "DelegationDiscipline",
+  "invariants": [
+    "Goal examined before delegation",
+    "Brief written for someone with no context"
+  ],
+  "mechanism": "Delegation begins with a validated goal, since {{misspec}} makes fluent execution worthless. The delegator writes a {{brief}} and accepts the loss described in {{leverage}}: more reach, less tactile contact. Direct hands-on work is retained where feel matters, since the handle alone does not show what is moving.",
+  "sema_category": "Roles",
+  "sema_id": "sema:DelegationDiscipline#mh:SHA-256:bb4637b2bc8f148e3869125832db7a8897b0e01d45b1553a875d172a51b01107",
+  "sema_layer": "Society",
+  "sema_ref": "DelegationDiscipline#bb46",
+  "sema_stub": "bb46"
+}

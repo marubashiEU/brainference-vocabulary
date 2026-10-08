@@ -1,0 +1,109 @@
+{
+  "_meta": {
+    "path": [
+      "Infrastructure",
+      "Data Structures"
+    ],
+    "ring": 1,
+    "source": "thesis/do_2026_ant_collective_behavior (Ch. 3.1.2, Eqs. 3.5-3.10, Fig. 3.5; Ch. 5.6)",
+    "tier": 1
+  },
+  "data_schema": {
+    "properties": {
+      "edges": {
+        "description": "Directed successions between node indices at t and t+1 sharing an agent",
+        "items": {
+          "properties": {
+            "bridged": {
+              "description": "True if added by gap bridging rather than observed",
+              "type": "boolean"
+            },
+            "from": {
+              "type": "integer"
+            },
+            "to": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "from",
+            "to"
+          ],
+          "type": "object"
+        },
+        "type": "array"
+      },
+      "interaction_rule": {
+        "description": "How [A_t]_ij = 1 is decided, e.g. 'centroid distance <= 3.3 mm'",
+        "type": "string"
+      },
+      "nodes": {
+        "items": {
+          "properties": {
+            "i": {
+              "type": "string"
+            },
+            "j": {
+              "type": "string"
+            },
+            "t": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "t",
+            "i",
+            "j"
+          ],
+          "type": "object"
+        },
+        "type": "array"
+      },
+      "window_length": {
+        "description": "w, number of time steps",
+        "minimum": 1,
+        "type": "integer"
+      },
+      "window_start": {
+        "description": "tau, first time step of the window",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "window_start",
+      "window_length",
+      "interaction_rule",
+      "nodes",
+      "edges"
+    ],
+    "type": "object"
+  },
+  "dependencies": {
+    "composes_with": {
+      "degree_entropy": "sema:DegreeEntropy#mh:SHA-256:a793cb859ab1915416e67b257770a97d4810b2ac751247aba715530df2d69297",
+      "spectral_entropy": "sema:SpectralEntropy#mh:SHA-256:d557f8c3d693a0ee6c24c656efb113cf0fab9dabae8c60f5ba1ae076dbc6b79a"
+    }
+  },
+  "failure_modes": [
+    "Identity switches and dropouts break chains and fabricate low-connectivity structure unless bridged",
+    "Memory depth is fixed at one step: longer recruitment chains or persistent roles are invisible",
+    "Proximity is not interaction: a distance threshold counts near-passes as contacts and inflates event counts",
+    "All successions are weighted equally regardless of contact duration, intensity or modality"
+  ],
+  "gloss": "Promote each timed interaction to a node and link interactions that follow each other through a shared participant",
+  "handle": "SecondOrderInteractionNetwork",
+  "invariants": [
+    "Nodes are interaction events (time, agent pair), not agents",
+    "Edges only connect events at consecutive time steps that share at least one agent",
+    "Edges are directed forward in time"
+  ],
+  "mechanism": "Start from a sequence of binary interaction matrices A_t, one per time step, where [A_t]_ij = 1 when agents i and j interact at t (for example, centroid distance at most r_p). Within a window of w steps starting at tau, every interaction event becomes a node v = (t, i, j). Add a directed edge from (t, a, b) to (t+1, c, d) whenever {a, b} and {c, d} share at least one agent. The result is a directed graph of event successions: it keeps who-then-whom, i.e. first-order Markov memory between consecutive interactions, which a time-aggregated network discards. Its out-degree counts how many next interactions an interaction can hand on to, so {{degree_entropy}} on it measures the diversity (unpredictability) of next steps, and {{spectral_entropy}} via L = B B^T measures the complexity of temporal pathways. Bridge short gaps where an interaction vanishes and reappears through tracking dropout, and repair chains broken by identity switches, or they register as false breaks.",
+  "preconditions": [
+    "Agents carry stable identities across time steps"
+  ],
+  "sema_category": "Data Structures",
+  "sema_id": "sema:SecondOrderInteractionNetwork#mh:SHA-256:8c66021828f4085a9a52154ee1d3d799583c0960c4c7b68ba161377e76083637",
+  "sema_layer": "Infrastructure",
+  "sema_ref": "SecondOrderInteractionNetwork#8c66",
+  "sema_stub": "8c66"
+}

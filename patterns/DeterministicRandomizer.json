@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Strategy"
+    ],
+    "ring": 1,
+    "tier": 2
+  },
+  "failure_modes": [
+    "Finite dice tables eventually repeat",
+    "Combinations that are incoherent when sampled independently"
+  ],
+  "gloss": "Use ordinary code to inject randomness so the model does not loop",
+  "handle": "DeterministicRandomizer",
+  "invariants": [
+    "Variety is produced outside the model by deterministic or seeded sampling",
+    "Each dimension is independent so combinations multiply"
+  ],
+  "mechanism": "Rather than asking a model to be creative, external code rolls dice over several independent scenario dimensions (who, mood, situation, circumstance) and hands the sampled combination to the model as a fixed script. Combinatorial variety comes from the code, and the model only performs the resulting scene.",
+  "sema_category": "Strategy",
+  "sema_id": "sema:DeterministicRandomizer#mh:SHA-256:a71b7a7916b6fdb579dbf49695b3cb97b739a463a815c50ce73b935a4cdfdaa7",
+  "sema_layer": "Mind",
+  "sema_ref": "DeterministicRandomizer#a71b",
+  "sema_stub": "a71b"
+}

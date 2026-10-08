@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Strategy"
+    ],
+    "ring": 2,
+    "tier": 2
+  },
+  "failure_modes": [
+    "Cheap router sends hard tasks to weak models",
+    "Router cost approaches the cost of doing the task"
+  ],
+  "gloss": "Choosing which model to send a job to takes at least the intelligence of the job",
+  "handle": "RouterIntelligenceParadox",
+  "invariants": [
+    "Routing quality is bounded by the router's understanding of the task",
+    "Delegation flows from strong to cheap"
+  ],
+  "mechanism": "A router that must decide which model should handle a task has to understand the task first. A weak router misjudges difficulty and misroutes. The sound design lets the strongest model make the routing decision and delegate cheap work downward, instead of putting a cheap classifier in front.",
+  "sema_category": "Strategy",
+  "sema_id": "sema:RouterIntelligenceParadox#mh:SHA-256:210ace812ff8e04bed205605c04a8666c0ca964a53c7b692cc12e3354f73c187",
+  "sema_layer": "Mind",
+  "sema_ref": "RouterIntelligenceParadox#210a",
+  "sema_stub": "210a"
+}

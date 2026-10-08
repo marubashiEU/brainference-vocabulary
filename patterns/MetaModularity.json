@@ -1,0 +1,34 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Strategy"
+    ],
+    "ring": 0,
+    "source": "research/on_the_origin_of_risk (meta-modularity; program text); research/what_is_complexity (Adam)",
+    "tier": 1
+  },
+  "dependencies": {
+    "references": {
+      "bounded_model_open_world": "sema:BoundedModelOpenWorld#mh:SHA-256:a33485666a4c67900ff103d12c3629590481489d73350ebc122bc15bb5419661"
+    }
+  },
+  "failure_modes": [
+    "Redundancy mistaken for meta-modularity: identical copies explain survival, not adaptation",
+    "Carrying more models than the system can afford to maintain",
+    "Failing to notice that the current model has expired, so the alternatives are never used"
+  ],
+  "gloss": "Adapt by holding overlapping, non-identical models of the same situation and moving between them cheaply",
+  "handle": "MetaModularity",
+  "invariants": [
+    "The models overlap in domain but differ in content",
+    "Inspecting each model reveals the domain it models",
+    "Switching between models costs less than rebuilding one from scratch"
+  ],
+  "mechanism": "A system keeps a population of overlapping but non-identical models of the same or adjacent domains, as genetic diversity in a population, gene-expression switching in a plant, or E. coli's many metabolic routes do. Because of {{bounded_model_open_world}}, any single model expires. Overlapping models contain information the primary model lacks, so the system can detect expiry and pivot. Contrast multi-modularity (identical spare parts, which solve damage but not novelty) and mono-modularity (one general model applied everywhere, which cannot dominate specialists across all problems).",
+  "sema_category": "Strategy",
+  "sema_id": "sema:MetaModularity#mh:SHA-256:b97e135e49a64811d5b909f338e4f9034642d7fb07386d724548dd2b83302597",
+  "sema_layer": "Mind",
+  "sema_ref": "MetaModularity#b97e",
+  "sema_stub": "b97e"
+}

@@ -1,0 +1,29 @@
+{
+  "_meta": {
+    "path": [
+      "Physics",
+      "Dynamics"
+    ],
+    "ring": 0,
+    "source": "main page: buzz words, mission ('how we self-organise')",
+    "tier": 1
+  },
+  "failure_modes": [
+    "Hidden coordinator: order attributed to self-organisation is actually imposed by an unnoticed central signal",
+    "Designed order mistaken for emergent order because the designer is out of view",
+    "Runaway feedback: local amplification locks the system into a rigid or degenerate pattern"
+  ],
+  "gloss": "Global order that arises from local interactions, with no component holding the blueprint",
+  "handle": "SelfOrganisation",
+  "invariants": [
+    "No central controller specifies the global pattern",
+    "The global pattern cannot be read off any single component",
+    "Removing the interactions removes the order, even if every component is intact"
+  ],
+  "mechanism": "Many components interact, each following rules that use only locally available signals. Order at a larger scale, such as a pattern, structure or collective behaviour, appears from those interactions. No component stores or specifies the global pattern, and the order persists only while the interactions and the energy or information flow feeding them continue.",
+  "sema_category": "Dynamics",
+  "sema_id": "sema:SelfOrganisation#mh:SHA-256:efc9067bfdfea22ceeed9dba82eb6e4c949a232ddf96fd8c20d07e4f51e03886",
+  "sema_layer": "Physics",
+  "sema_ref": "SelfOrganisation#efc9",
+  "sema_stub": "efc9"
+}

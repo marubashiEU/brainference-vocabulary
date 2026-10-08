@@ -1,0 +1,90 @@
+{
+  "_meta": {
+    "path": [
+      "Infrastructure",
+      "Data Structures"
+    ],
+    "ring": 2,
+    "source": "book/on_the_origin_of_risk (Timlett 2025), Technical appendix I (Tables 6-7), after B. O'Reilly, Residues (2024)",
+    "tier": 2
+  },
+  "data_schema": {
+    "properties": {
+      "components": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "stressors": {
+        "items": {
+          "properties": {
+            "cells": {
+              "description": "One entry per component: null when unaffected, otherwise parts built over parts required",
+              "items": {
+                "properties": {
+                  "built": {
+                    "minimum": 0,
+                    "type": "integer"
+                  },
+                  "required": {
+                    "minimum": 1,
+                    "type": "integer"
+                  }
+                },
+                "type": [
+                  "object",
+                  "null"
+                ]
+              },
+              "type": "array"
+            },
+            "name": {
+              "type": "string"
+            },
+            "work_to_complete": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "work_to_remove": {
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "name",
+            "cells"
+          ],
+          "type": "object"
+        },
+        "type": "array"
+      }
+    },
+    "required": [
+      "components",
+      "stressors"
+    ],
+    "type": "object"
+  },
+  "dependencies": {
+    "composes_with": {
+      "fractional_meta_model": "sema:FractionalMetaModel#mh:SHA-256:3eca15b2980bb7a1d6b64d65d940a7ef05df23858c862623417c3dceb72471e7"
+    }
+  },
+  "failure_modes": [
+    "Filling the rows with only realistic stressors, which narrows the design",
+    "Reading row totals as probabilities and ranking stressors by them"
+  ],
+  "gloss": "A stressors-by-components matrix showing which parts each possible stressor would force to change",
+  "handle": "StressorIncidenceMatrix",
+  "invariants": [
+    "Rows are possible stressors and need no probability attached",
+    "In the fractional form, the completion work and the removal work of a row sum to its total component count"
+  ],
+  "mechanism": "List candidate stressors as rows and the components of a design as columns. Mark a cell when the stressor would force a change to the naive version of that component. Row totals count how many components each stressor touches; column totals count how many stressors bear on each component. Components that share stressors are refactored to sit together and share the structure that survives them. In the fractional form, following {{fractional_meta_model}}, each cell records k of n parts already built, and two extra columns give the work still needed to complete the full function if the stressor arrives and the work needed to remove it if it never will. Barry O'Reilly introduced the binary form for residuality analysis; Timlett proposes the fractional extension.",
+  "sema_category": "Data Structures",
+  "sema_id": "sema:StressorIncidenceMatrix#mh:SHA-256:3406c39cb5606f4de87dee8f42b7726454356d552b1fac39c6f923bf2724a934",
+  "sema_layer": "Infrastructure",
+  "sema_ref": "StressorIncidenceMatrix#3406",
+  "sema_stub": "3406"
+}

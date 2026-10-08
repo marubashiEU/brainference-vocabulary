@@ -1,0 +1,35 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Reasoning"
+    ],
+    "ring": 0,
+    "source": "research/what_is_complexity (tentative conclusions); research/founder_strategies_from_biology",
+    "tier": 1
+  },
+  "dependencies": {
+    "references": {
+      "computational_irreducibility": "sema:ComputationalIrreducibility#mh:SHA-256:77eaaa0cb7d5fdf22915b2147d1a9b4061acdd4f45c5297dd8c60ac5bf2fa7f7",
+      "model_as_compression": "sema:ModelAsCompression#mh:SHA-256:265d6bf16579e276ca74ec7f344c57e683d83d7df896794529a96d088ed2e54f"
+    }
+  },
+  "failure_modes": [
+    "Turkey problem: a model fits every available data point and is catastrophically wrong, because the relevant information lies outside the agent's position in information space",
+    "Confusing complicated with complex, and treating a hard but closed problem as open",
+    "Spending effort to close the gap instead of detecting when the {{model_as_compression}} has expired"
+  ],
+  "gloss": "Complexity is the gap between a bounded model and an open world, and it does not close",
+  "handle": "BoundedModelOpenWorld",
+  "invariants": [
+    "Complexity is a relation between a model and its world, not a property of the world alone",
+    "The gap cannot be closed, only managed",
+    "Every model has a valid-until date, whether or not it is known"
+  ],
+  "mechanism": "Every {{model_as_compression}} is bounded by resources and by what it incorporated when it was built. The world it models is open: exogenous effects arise from what the model never included, and a model cannot fully account for itself. Complexity names this gap. {{computational_irreducibility}}, observer effects and reflexivity hold it open. Every model therefore carries a valid-until date, and the practical question is how a system detects that its model has expired.",
+  "sema_category": "Reasoning",
+  "sema_id": "sema:BoundedModelOpenWorld#mh:SHA-256:a33485666a4c67900ff103d12c3629590481489d73350ebc122bc15bb5419661",
+  "sema_layer": "Mind",
+  "sema_ref": "BoundedModelOpenWorld#a334",
+  "sema_stub": "a334"
+}

@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Strategy"
+    ],
+    "ring": 2,
+    "tier": 3
+  },
+  "failure_modes": [
+    "Drifting with no direction",
+    "Using the idea to excuse avoidance"
+  ],
+  "gloss": "Act from flow and least resistance rather than from a goal or need to prove",
+  "handle": "EffortlessAction",
+  "invariants": [
+    "Action does not depend on proving worth",
+    "Flow is sustained, not forced"
+  ],
+  "mechanism": "Following the Taoist idea of wu-wei, action arises without deliberate attachment, as a bird chirps. The same decision made from creation instead of from insecurity or trauma aligns thought, action, and circumstance into one line. A companion built on it aims at flow instead of commanding a schedule.",
+  "sema_category": "Strategy",
+  "sema_id": "sema:EffortlessAction#mh:SHA-256:51723c907410c012aee6cb8d2cbbae8b40e1d7e4bb59919f9ee7fc1478a995d0",
+  "sema_layer": "Mind",
+  "sema_ref": "EffortlessAction#5172",
+  "sema_stub": "5172"
+}

@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "path": [
+      "Society",
+      "Economics"
+    ],
+    "ring": 2,
+    "tier": 3
+  },
+  "failure_modes": [
+    "Resource treated as scarce that the incumbent can buy",
+    "Assuming today's constraints persist"
+  ],
+  "gloss": "Predict what an incumbent will not pursue by asking where it is not spoiled for resources",
+  "handle": "IncumbentSlackTest",
+  "invariants": [
+    "Abundance of the incumbent's inputs is checked, not assumed",
+    "Constraints are tested per resource"
+  ],
+  "mechanism": "Incumbents skip domains where they have abundant substitutes and pursue those where they are constrained. Ask on which resource the incumbent has effectively infinite supply and where it is scarce. A niche is defensible where a small team's efficiency counts for more than the incumbent's ability to buy more of a resource such as annotation.",
+  "sema_category": "Economics",
+  "sema_id": "sema:IncumbentSlackTest#mh:SHA-256:62d2f2d2edcbad3f8f568aab909f283d860add11b7a4648b0572686a44010731",
+  "sema_layer": "Society",
+  "sema_ref": "IncumbentSlackTest#62d2",
+  "sema_stub": "62d2"
+}

@@ -1,0 +1,34 @@
+{
+  "_meta": {
+    "path": [
+      "Society",
+      "Coordination"
+    ],
+    "ring": 2,
+    "source": "book/on_the_origin_of_risk (Timlett 2025), ch. 12-13 (organisation games)",
+    "tier": 2
+  },
+  "dependencies": {
+    "references": {
+      "laterality_cost": "sema:LateralityCost#mh:SHA-256:b281fb7f41f047b98e626103e33df15e7094bba711bbf7dc1badf6a80f18aa22",
+      "transition_hub": "sema:TransitionHub#mh:SHA-256:07981d492ee9dd08ac568af13f1342f2fd2d22353bc67dcd32c5cfe3d1e7211c"
+    }
+  },
+  "failure_modes": [
+    "Explaining every coordination failure as misaligned incentives and adding rewards and penalties",
+    "Policies such as always filling silence that make every exit require all parties",
+    "Playing the optimum of the current game when it leaves no cheap route to the next"
+  ],
+  "gloss": "Perfectly aligned agents still fail when the best joint strategy changes and too many must switch",
+  "handle": "OrganisationGame",
+  "invariants": [
+    "Agents share the payoff in every game, so misaligned incentives are not the obstacle",
+    "The cost of a game change is the number of agents who must change strategy"
+  ],
+  "mechanism": "Classical game theory locates cooperation problems in misaligned incentives, and treats pure coordination games, where everyone shares the payoff, as trivial. In an organisation game the agents are fully aligned, but the game itself keeps changing, so the strategy pair that maximises the shared payoff shifts over time. The difficulty becomes the {{laterality_cost}} of each transition: how many agents must notice the change and switch. A conversation ends easily only if one party can end it alone, which pauses allow. Good positions are strategies that are near-optimal across the likely next games, so most switches need one agent or none, in the manner of a {{transition_hub}}. Zombie projects persist because no low-laterality exit exists.",
+  "sema_category": "Coordination",
+  "sema_id": "sema:OrganisationGame#mh:SHA-256:e44647d834554cc2ade69ada9170175e27c6f3f81ef2fd254c518ce582b7358f",
+  "sema_layer": "Society",
+  "sema_ref": "OrganisationGame#e446",
+  "sema_stub": "e446"
+}

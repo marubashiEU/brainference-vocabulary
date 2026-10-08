@@ -1,0 +1,40 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Inference"
+    ],
+    "ring": 2,
+    "tier": 3
+  },
+  "failure_modes": [
+    "Event table too coarse to capture the situations that matter",
+    "Levels saturate and the system stops changing"
+  ],
+  "gloss": "A few leaky reservoirs fill from events and shift how the system responds",
+  "handle": "LeakyModulatorBuckets",
+  "invariants": [
+    "Every reservoir has a drain, so levels decay without fresh input",
+    "Levels modulate response but do not replace the input"
+  ],
+  "mechanism": "A small set of scalar reservoirs, each modeled on a neuromodulator, fills when specific events occur and drains steadily through a leak. A lookup from event type to reservoir levels defines what each event does. The current reservoir levels modulate the whole system's response, so identical input yields different behavior depending on recent history.",
+  "parameters": [
+    {
+      "description": "Number of modulator reservoirs",
+      "name": "reservoir_count",
+      "range": "2-8",
+      "type": "integer"
+    },
+    {
+      "description": "Fraction drained per time step",
+      "name": "leak_rate",
+      "range": "0-1",
+      "type": "float"
+    }
+  ],
+  "sema_category": "Inference",
+  "sema_id": "sema:LeakyModulatorBuckets#mh:SHA-256:2a558c9d2cef416d077fd947a3b12cfa8bad82614f5518160078744c300f778a",
+  "sema_layer": "Mind",
+  "sema_ref": "LeakyModulatorBuckets#2a55",
+  "sema_stub": "2a55"
+}

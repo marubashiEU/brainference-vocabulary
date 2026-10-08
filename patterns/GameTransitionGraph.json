@@ -1,0 +1,36 @@
+{
+  "_meta": {
+    "path": [
+      "Society",
+      "Coordination"
+    ],
+    "ring": 2,
+    "source": "book/on_the_origin_of_risk (Timlett 2025), ch. 13 (Fig. 16-18), Technical appendix I (fractional models and organisation games)",
+    "tier": 2
+  },
+  "dependencies": {
+    "composes_with": {
+      "agent_transition_graph": "sema:AgentTransitionGraph#mh:SHA-256:e47085dbeb60c4b6693b562d2ae9dfd0da62dab6f438c0e7873d808446a8c4cf"
+    },
+    "references": {
+      "laterality_cost": "sema:LateralityCost#mh:SHA-256:b281fb7f41f047b98e626103e33df15e7094bba711bbf7dc1badf6a80f18aa22",
+      "organisation_game": "sema:OrganisationGame#mh:SHA-256:e44647d834554cc2ade69ada9170175e27c6f3f81ef2fd254c518ce582b7358f"
+    }
+  },
+  "failure_modes": [
+    "Modelling only the current game and missing the cost of the next transition",
+    "Ignoring the price of a strategic position in the current game"
+  ],
+  "gloss": "A graph of pure coordination games whose edges are weighted by how many agents must switch strategy",
+  "handle": "GameTransitionGraph",
+  "invariants": [
+    "Every node is a pure coordination game, so agents never disagree about payoffs",
+    "For n agents, edge weights range from 0 to n"
+  ],
+  "mechanism": "For a fixed set of agents, each node is a pure coordination game: one payoff matrix, shared by all agents. As conditions change, the game being played moves along edges. Weight each edge by its laterality, the number of agents whose best strategy differs between the two games, so each edge is a transition as in {{organisation_game}}, priced as in {{laterality_cost}}. Given a forecast mix of likely games, a strategic position is the strategy profile that minimises expected laterality over likely transitions, even at some loss in the current game. That loss is the cost of holding the position. Like {{agent_transition_graph}}, it can be read backwards from a target game, but it weights edges by coordination effort, not by observed probability.",
+  "sema_category": "Coordination",
+  "sema_id": "sema:GameTransitionGraph#mh:SHA-256:981d21c98c94ba0a90c39f06c9f1768832d512ae27a6cbd750837bcda461be00",
+  "sema_layer": "Society",
+  "sema_ref": "GameTransitionGraph#981d",
+  "sema_stub": "981d"
+}

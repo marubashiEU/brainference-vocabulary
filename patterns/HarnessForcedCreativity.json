@@ -1,0 +1,33 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Strategy"
+    ],
+    "ring": 1,
+    "tier": 2
+  },
+  "dependencies": {
+    "references": {
+      "harness": "sema:HarnessAsArchitecture#mh:SHA-256:8256b27d0644d7a19ab8b2475681704841604bc81604cb1d44c24953e56aed18",
+      "pink_elephant": "sema:PinkElephantContext#mh:SHA-256:5131b6e6652a91b151c3605d0bce9dbc3d763c3c2cc4b803435dc83ec9ff45e4",
+      "randomizer": "sema:DeterministicRandomizer#mh:SHA-256:a71b7a7916b6fdb579dbf49695b3cb97b739a463a815c50ce73b935a4cdfdaa7"
+    }
+  },
+  "failure_modes": [
+    "Finite {{randomizer}} tables repeat at scale",
+    "Prior outputs kept in context anchor the model regardless of instruction"
+  ],
+  "gloss": "Models are only creative when the harness forces variation from outside",
+  "handle": "HarnessForcedCreativity",
+  "invariants": [
+    "Variation is injected by the {{harness}} before generation",
+    "Earlier outputs are not left in context when new ones are requested"
+  ],
+  "mechanism": "A model asked to be creative loops after a few dozen outputs and is overconfident about its own creativity. Creativity is instead built from {{randomizer}} sampling scenario dimensions in code, so each generation receives a different script. Asking the model to avoid earlier outputs fails because of {{pink_elephant}}: those outputs remain visible. The variety belongs to the {{harness}}, not to the model.",
+  "sema_category": "Strategy",
+  "sema_id": "sema:HarnessForcedCreativity#mh:SHA-256:ba4a4f08dd6f0b08dee0b852de8dc953445f32143a75d67c90174ed8704f620b",
+  "sema_layer": "Mind",
+  "sema_ref": "HarnessForcedCreativity#ba4a",
+  "sema_stub": "ba4a"
+}

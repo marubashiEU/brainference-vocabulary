@@ -1,0 +1,43 @@
+{
+  "_meta": {
+    "path": [
+      "Society",
+      "Coordination"
+    ],
+    "ring": 1,
+    "source": "thesis/do_2026_ant_collective_behavior (Abstract; Ch. 1.3; Ch. 1.5.1 'informational architecture'; Ch. 5.1; Ch. 5.7.1; Ch. 5.8)",
+    "tier": 2
+  },
+  "dependencies": {
+    "composes_with": {
+      "sequence_signature": "sema:InteractionSequenceEntropySignature#mh:SHA-256:8e4b712961babae9592a8b770702ab22cb5aba550eaacceebb80484b087dde36",
+      "spatial_divergence": "sema:LocalSpatialStateDivergence#mh:SHA-256:2b5e93e20a335e9aff9fa14d6d8fc75b3872c759c2e7d331da7af4449062bae3"
+    },
+    "references": {
+      "distributed_intelligence": "sema:DistributedIntelligence#mh:SHA-256:3aa5a87f1a342b5c09df148bc552e7833950cdd53c8bac425c50685822b15aeb",
+      "representation_order": "sema:RepresentationDependentOrder#mh:SHA-256:212ca6d02215c8ab853b6728f8fe8d3e72ab4f28d025437d28be2f817945e45a",
+      "superorganism": "sema:Superorganism#mh:SHA-256:e55b795f4134b2dd62491ed796682f279772a5c8c717881bb0cb2a622dfab098"
+    }
+  },
+  "failure_modes": [
+    "Equating the architecture with one measure on one representation",
+    "Reading descriptive regime signatures as mechanisms; the measures detect and characterise regimes but do not by themselves explain transitions (that needs information-flow measures such as transfer entropy, perturbation experiments and longer recordings)",
+    "Transferring ant findings to AI agent swarms without re-validating what counts as an interaction there"
+  ],
+  "gloss": "Read a collective's behavioural regime as a configuration of how information can flow through its interactions",
+  "handle": "CollectiveInformationArchitecture",
+  "invariants": [
+    "A regime is characterised by several representations, not one score",
+    "Signatures are reported relative to density and to a null baseline",
+    "The architecture is inferred from observed interactions, without access to any agent's internal plan"
+  ],
+  "mechanism": "A decentralised collective such as a {{superorganism}} processes information through its interaction network, so a behavioural regime (exploring, foraging, defending) can be described as a configuration of that network's informational architecture: the diversity, predictability and causal structure of interaction pathways. Measure it on several complementary representations, since {{representation_order}} warns that no single one is sufficient: spatial structure against a random baseline ({{spatial_divergence}}) and succession structure of interactions ({{sequence_signature}}), compared at matched density and against nulls. A regime shift then appears as a reorganisation of the architecture, for example the bifurcation, as interaction density rises, of low-entropy roaming into high-entropy trailing and low-entropy aggression. The view links micro-level interaction rules to macro-level colony states and generalises to other collectives, including networks of AI agents, where the same measures can detect which coordination regime a {{distributed_intelligence}} is in.",
+  "preconditions": [
+    "Interactions between identifiable agents can be observed over time"
+  ],
+  "sema_category": "Coordination",
+  "sema_id": "sema:CollectiveInformationArchitecture#mh:SHA-256:5891d584ec59bddf1b8da79b61f07530b7fdfb53f13b59590ea9dd629af3b22b",
+  "sema_layer": "Society",
+  "sema_ref": "CollectiveInformationArchitecture#5891",
+  "sema_stub": "5891"
+}

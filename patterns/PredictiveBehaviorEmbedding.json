@@ -1,0 +1,36 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Inference"
+    ],
+    "ring": 2,
+    "source": "thesis/do_2026_ant_collective_behavior (Ch. 2.3, Fig. 2.5; Ch. 5.7.3)",
+    "tier": 3
+  },
+  "dependencies": {
+    "references": {
+      "model_as_compression": "sema:ModelAsCompression#mh:SHA-256:265d6bf16579e276ca74ec7f344c57e683d83d7df896794529a96d088ed2e54f"
+    },
+    "yields": {
+      "coevolution": "sema:AdaptiveNetworkCoevolution#mh:SHA-256:e5886df4ff8a4bf9d1a5c5941c0f7a2d0f20263aae354cf34be2fedac2572ba2"
+    }
+  },
+  "failure_modes": [
+    "Visual separation in a 3-D projection is not a classifier; the split must be validated on held-out individuals",
+    "Trained on very few individuals, the features may encode identity rather than behaviour",
+    "Missing joint angles from tracking failures, if imputed naively, create spurious clusters"
+  ],
+  "gloss": "Train a network to predict future motion; its internal features separate behaviours it was never told about",
+  "handle": "PredictiveBehaviorEmbedding",
+  "invariants": [
+    "No behavioural labels are used in training; labels are only used afterwards to inspect the embedding",
+    "Embeddings are taken from a fixed layer after training, then standardised before projection"
+  ],
+  "mechanism": "To find individual behavioural states without labels, train a model on a self-supervised prediction task and read its hidden layers. For ants: represent each pose as joint angles in exponential-map form (63 dimensions), take 25 observed frames at 15 fps, compress the 35-frame window (observed plus predicted) with a discrete cosine transform, and train a graph convolutional network (37 nodes, 256 hidden features, 12 residual blocks with batch norm, tanh and dropout 0.5, learnable node-to-node attention, about 2.1 M parameters) to predict the future joint angles with an L1 loss. Hook the output of the final residual block, standardise, and project with PCA: the first three components (47% of variance) already separate walking, running and antennation. A model that must forecast motion has to compress it, as in {{model_as_compression}}, and the compression aligns with behavioural state. The aim is per-agent state labels that, with network structure, let one study {{coevolution}} between individual states and collective topology.",
+  "sema_category": "Inference",
+  "sema_id": "sema:PredictiveBehaviorEmbedding#mh:SHA-256:c46b7187c440856b539933c739aa8631852808e27fc784330102a57239d97a3e",
+  "sema_layer": "Mind",
+  "sema_ref": "PredictiveBehaviorEmbedding#c46b",
+  "sema_stub": "c46b"
+}

@@ -1,0 +1,33 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Strategy"
+    ],
+    "ring": 2,
+    "source": "book/on_the_origin_of_risk (Timlett 2025), Technical appendix III (efficiency, prediction and cryptographic change)",
+    "tier": 3
+  },
+  "dependencies": {
+    "references": {
+      "parasitic_search": "sema:ParasiticSearch#mh:SHA-256:484b5fd0bd35f8b9a79a32971fb0bde9611e533921bc219add0467730082f877"
+    }
+  },
+  "failure_modes": [
+    "Over-streamlining and monotonous roles that leave no variety for added functions",
+    "Never attending to the skipped input, so a failed prediction goes undetected",
+    "Output metrics that cannot see value created inside the gaps"
+  ],
+  "gloss": "Spend the capacity a prediction frees on hidden extra work instead of returning it as savings",
+  "handle": "CryptographicChange",
+  "invariants": [
+    "The original function's inputs and outputs are unchanged by either kind of change",
+    "Added hidden work must cost no more than the processing it replaced"
+  ],
+  "mechanism": "A reliable prediction about inputs lets a process skip states or inputs, for example by not processing a B that always follows an A. The freed capacity can be used in two ways. Quasi-cryptographic change returns it as a measurable efficiency saving to whoever funds the process. Cryptographic change spends it on additional functions inside the gaps, which leave the original input-output behaviour and budget unchanged and so are invisible to output metrics, as in {{parasitic_search}} or attention freeing a mind to wander. Hidden functions need a varied host process to feed on, as a code book needs many different words.",
+  "sema_category": "Strategy",
+  "sema_id": "sema:CryptographicChange#mh:SHA-256:43e6ed866013935d7ec4f3e89f812582f1b3a8c8b732bd5c495d6d48ba666ced",
+  "sema_layer": "Mind",
+  "sema_ref": "CryptographicChange#43e6",
+  "sema_stub": "43e6"
+}

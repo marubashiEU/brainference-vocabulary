@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Strategy"
+    ],
+    "ring": 2,
+    "tier": 3
+  },
+  "failure_modes": [
+    "Horizon so short that endgame defection appears",
+    "Stated horizon that contradicts what actually happens erodes trust in later instructions"
+  ],
+  "gloss": "A known finite horizon raises the effort an agent spends per step",
+  "handle": "BoundedHorizonEffort",
+  "invariants": [
+    "The horizon is stated to the agent, not merely implied",
+    "Perceived duration changes the agent's care per step"
+  ],
+  "mechanism": "Telling an agent that a role lasts many rounds, or that it will end at a known time, makes it treat each step as consequential. Effort scales with the perceived stake of the whole horizon, even when only one round is actually executed.",
+  "sema_category": "Strategy",
+  "sema_id": "sema:BoundedHorizonEffort#mh:SHA-256:b8e421c208de936bf9ae12283c34a719b0c2eebd45d5e3aaccf9d08790667f4a",
+  "sema_layer": "Mind",
+  "sema_ref": "BoundedHorizonEffort#b8e4",
+  "sema_stub": "b8e4"
+}

@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "path": [
+      "Society",
+      "Coordination"
+    ],
+    "ring": 1,
+    "tier": 2
+  },
+  "failure_modes": [
+    "Assuming shared context that the agent lacks",
+    "Over-specifying so the agent has no room for judgment"
+  ],
+  "gloss": "Brief an agent like a capable outsider who has never seen your company",
+  "handle": "FreelancerBrief",
+  "invariants": [
+    "The brief is self-contained",
+    "Capabilities and blind spots are both assumed"
+  ],
+  "mechanism": "Delegated work fails when tasks are dropped over the fence. The brief instead supplies everything a talented freelancer with no context would need: goal, background, constraints, and what good looks like. Agents are highly capable in some areas and oblivious in others, the same as new hires.",
+  "sema_category": "Coordination",
+  "sema_id": "sema:FreelancerBrief#mh:SHA-256:55eaa86199396825015398547eda7f65e6c9e1f9d59fb3bf802b66b2686fb3cb",
+  "sema_layer": "Society",
+  "sema_ref": "FreelancerBrief#55ea",
+  "sema_stub": "55ea"
+}

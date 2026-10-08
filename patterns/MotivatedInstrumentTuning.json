@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "path": [
+      "Infrastructure",
+      "Verification"
+    ],
+    "ring": 1,
+    "tier": 2
+  },
+  "failure_modes": [
+    "Literature dominated by confirming findings",
+    "Unreproducible results from unreported settings"
+  ],
+  "gloss": "Investigators who need a result tune their instruments toward it, often without intent",
+  "handle": "MotivatedInstrumentTuning",
+  "invariants": [
+    "Bias arises from incentives and identity, not necessarily bad faith",
+    "Instrument settings are part of the result and must be reported"
+  ],
+  "mechanism": "When identity, career, or brand depends on a claim, the person adjusts instrument settings, exclusions, and reporting toward confirming it, usually subconsciously. The same applies to a model whose context holds a belief: it finds support for what it already holds. Unreported tuning choices make the resulting evidence unreliable.",
+  "sema_category": "Verification",
+  "sema_id": "sema:MotivatedInstrumentTuning#mh:SHA-256:ed8f6b395512ded44b703cda205982bbb2b6c65e010fc835ea41cebedd7466fb",
+  "sema_layer": "Infrastructure",
+  "sema_ref": "MotivatedInstrumentTuning#ed8f",
+  "sema_stub": "ed8f"
+}

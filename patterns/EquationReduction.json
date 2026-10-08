@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "path": [
+      "Physics",
+      "Dynamics"
+    ],
+    "ring": 2,
+    "tier": 2
+  },
+  "failure_modes": [
+    "Fit that captures a correlation and not a mechanism",
+    "Complexity that resists compact form"
+  ],
+  "gloss": "Compress a complex phenomenon into a short interpretable equation",
+  "handle": "EquationReduction",
+  "invariants": [
+    "Every parameter in the result has a stated meaning",
+    "The equation fits data across instances, not one case"
+  ],
+  "mechanism": "Collect data across many instances, search by analysis for an invariant relation, and express it as a compact equation in which each parameter and interaction has a known meaning. The classic example relates heartbeat rate, body size, and lifespan, yielding a near-constant number of heartbeats per life across species.",
+  "sema_category": "Dynamics",
+  "sema_id": "sema:EquationReduction#mh:SHA-256:c553290bf7a727da9177f5fea9ede2cf4827bd253e57e237cf7d44d8a83e833f",
+  "sema_layer": "Physics",
+  "sema_ref": "EquationReduction#c553",
+  "sema_stub": "c553"
+}

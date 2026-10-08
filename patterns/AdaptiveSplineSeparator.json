@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Inference"
+    ],
+    "ring": 2,
+    "source": "thesis/do_2026_ant_collective_behavior (Ch. 3.3, Eqs. 3.29-3.32; Ch. 4.2.3, Fig. 4.4)",
+    "tier": 2
+  },
+  "dependencies": {
+    "composes_with": {
+      "clustered_testing": "sema:ClusteredObservationTesting#mh:SHA-256:5f8e39deca5c4095ede80f05bb368d0ded5efb22e397d75aad53ce7d217866cf"
+    },
+    "references": {
+      "entropy_collapse": "sema:EntropyDensityCollapse#mh:SHA-256:0874645031ec2852f52b3a5a1c3980055703036ef7278df3aee69c6359559bb3"
+    }
+  },
+  "failure_modes": [
+    "Overfitting: 40 free control points can separate noise; without re-fitting on permuted labels the score is optimistic",
+    "Permuting windows instead of samples inflates significance",
+    "Defining 'below' and 'above' only for a single-valued curve; it cannot represent groups that interleave"
+  ],
+  "gloss": "Fit a curve through a 2-D scatter that maximally separates two groups, to catch oblique separation",
+  "handle": "AdaptiveSplineSeparator",
+  "invariants": [
+    "The separator is optimised and tested under the same grouping of observations",
+    "Control points stay inside the observed data range, so the curve does not extrapolate",
+    "Significance comes from re-optimising under permuted labels, not from the optimised score itself"
+  ],
+  "mechanism": "Axis-wise tests ask whether groups differ in x or in y; groups can differ along a diagonal and pass both. In a 2-D space (for example the rescaled coordinates from an {{entropy_collapse}}), define a smooth spline C(l) through c control points (40) with x fixed, log-spaced over the data range, and y free. Initialise the y values on an existing curve such as the fitted scaling function. For each observation r_j, find the nearest point on the curve and take the signed perpendicular distance d_j (positive below, negative above). Optimise the log-y control values with L-BFGS-B, box-bounded to the observed y range, to maximise |mean d(group 1) - mean d(group 2)|, stopping on small gradient or function change (e.g. 1e-5, 1e-6, at most 200 iterations). Report the share of each group on each side, and judge significance with a permutation test that shuffles group labels between whole samples, as in {{clustered_testing}}. For fire ant trailing versus aggression, 67.8% of aggression windows fell below the curve and 70.6% of trail windows above (colony-level permutation p = 0.03), a split invisible to axis-wise GEE (p = 0.47, 0.97).",
+  "sema_category": "Inference",
+  "sema_id": "sema:AdaptiveSplineSeparator#mh:SHA-256:6cd0be0ce642cfb16527c769bc946c7c7561d30e809bb9f5c0be55d20d42e5f0",
+  "sema_layer": "Mind",
+  "sema_ref": "AdaptiveSplineSeparator#6cd0",
+  "sema_stub": "6cd0"
+}

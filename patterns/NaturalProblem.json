@@ -1,0 +1,32 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Reasoning"
+    ],
+    "ring": 2,
+    "source": "research/on_the_origin_of_risk (meta-accuracy, meta-precision; the test)",
+    "tier": 3
+  },
+  "dependencies": {
+    "references": {
+      "bounded_model_open_world": "sema:BoundedModelOpenWorld#mh:SHA-256:a33485666a4c67900ff103d12c3629590481489d73350ebc122bc15bb5419661"
+    }
+  },
+  "failure_modes": [
+    "Single-objective optimisation stalls in local minima that a single metric cannot cross",
+    "Standardising terminology or benchmarks before a domain is understood"
+  ],
+  "gloss": "A problem where making attempts comparable is what prevents solving it",
+  "handle": "NaturalProblem",
+  "invariants": [
+    "In a natural problem no single distance-to-fitness can be computed across all targets",
+    "Standardising the metric forecloses the targets it does not rank"
+  ],
+  "mechanism": "Meta-precision is the shared metric that makes attempts commensurable; meta-accuracy is hitting any of several available targets, each with its own encoding. In artificial problems the two coincide, because the ranking metric also defines success. In a natural problem raising meta-accuracy necessarily costs meta-precision, and the signature is loss of commensurability, as in alternative splicing or disordered proteins. This is one form {{bounded_model_open_world}} takes when a single metric is imposed.",
+  "sema_category": "Reasoning",
+  "sema_id": "sema:NaturalProblem#mh:SHA-256:4e940c2ed5bebfb77fde543364639381f4cfa06c685032a75d657bdc05fc410a",
+  "sema_layer": "Mind",
+  "sema_ref": "NaturalProblem#4e94",
+  "sema_stub": "4e94"
+}

@@ -1,0 +1,41 @@
+{
+  "_meta": {
+    "path": [
+      "Infrastructure",
+      "Verification"
+    ],
+    "ring": 0,
+    "source": "thesis/do_2026_ant_collective_behavior (Ch. 1.2.2; Ch. 3.1.1 SNM; Ch. 3.1.2 STNM; Ch. 5.6 null-model limitations)",
+    "tier": 1
+  },
+  "dependencies": {
+    "composes_with": {
+      "jensen_shannon_divergence": "sema:JensenShannonDivergence#mh:SHA-256:b3b4314fee746b1e97b133372bcdb1d9dd1a3a98f90fd19ca19bb47dfef04a6b"
+    }
+  },
+  "failure_modes": [
+    "Null too weak: it lacks constraints the real system has (density, boundaries, kinematics), so trivial structure looks significant",
+    "Null too strong: it bakes in the mechanism itself and erases the effect",
+    "Unmodelled mechanisms: a deviation is credited to 'social structure' when an unmodelled factor (pheromone fields, task allocation, internal state) could also produce it",
+    "Choosing the null after seeing which one gives a significant result"
+  ],
+  "gloss": "Attribute structure to a mechanism only by beating a baseline that keeps everything except that mechanism",
+  "handle": "NullModelBaseline",
+  "invariants": [
+    "The null keeps every constraint except the mechanism under test",
+    "Observed and null data pass through the identical construction and measurement pipeline",
+    "Many null realisations are drawn, so the comparison is against a distribution, not a single draw"
+  ],
+  "mechanism": "To claim that an observed pattern comes from mechanism X, build a null model that preserves the constraints you are not testing (counts, bounds, marginal statistics, population over time) and randomises exactly what X would add. Generate many realisations, apply the identical pipeline and measures to them, and compare the observed values with the null distribution, for instance with {{jensen_shannon_divergence}}. Structure that survives the comparison is attributable to what the null randomised; structure the null reproduces is explained by what it kept. Nulls form a ladder: a uniform random placement with the same number of agents per frame tests whether any spatial organisation exists; a null that also keeps individual movement statistics tests whether organisation exceeds what individual kinematics alone would produce.",
+  "postconditions": [
+    "Any remaining difference is attributable to what the null randomised, and only to that"
+  ],
+  "preconditions": [
+    "The mechanism under test is stated before the null is designed"
+  ],
+  "sema_category": "Verification",
+  "sema_id": "sema:NullModelBaseline#mh:SHA-256:9d361368a16dd9c0d05cbb9fd851745b75eae2c8608e22ade4801687a80761c4",
+  "sema_layer": "Infrastructure",
+  "sema_ref": "NullModelBaseline#9d36",
+  "sema_stub": "9d36"
+}

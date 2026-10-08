@@ -1,0 +1,34 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Inference"
+    ],
+    "ring": 2,
+    "source": "thesis/do_2026_ant_collective_behavior (Ch. 2.2.4-2.2.5, Eqs. 2.6-2.8; deepSORT/ByteTrack adaptation)",
+    "tier": 1
+  },
+  "dependencies": {
+    "yields": {
+      "second_order_network": "sema:SecondOrderInteractionNetwork#mh:SHA-256:8c66021828f4085a9a52154ee1d3d799583c0960c4c7b68ba161377e76083637"
+    }
+  },
+  "failure_modes": [
+    "Dense clusters (aggression) still produce identity swaps that need manual or rule-based repair downstream",
+    "A re-ID model trained on few individuals from one viewpoint generalises poorly to new animals or lighting",
+    "Holding position during occlusion mislocates fast movers when they reappear"
+  ],
+  "gloss": "Match confident detections first, consult appearance only on ties, and let weak detections fill gaps, to keep identities unbroken",
+  "handle": "ConfidenceCascadeTracking",
+  "invariants": [
+    "Low-confidence detections can never displace a track already matched by a high-confidence one",
+    "Appearance is consulted only when geometry is ambiguous",
+    "A track survives a bounded number of unmatched frames, then is deleted"
+  ],
+  "mechanism": "Multi-object tracking for interaction analysis, where every lost or swapped identity breaks a chain in a {{second_order_network}}. Each track holds a Kalman state (x, y, s, r, dx, dy, ds): box centre, area, aspect ratio and velocities, with a constant-velocity model, large initial velocity uncertainty (1e4) and small process noise. Each frame: (1) match high-confidence detections (score > 0.7) to all active tracks by IoU distance 1 - IoU with the Hungarian algorithm; (2) when best and second-best IoU candidates are too close, use a re-identification network (ResNet-50 fine-tuned with triplet loss, cosine distance on embeddings) as a tie-breaker; (3) match remaining low-confidence detections (0.1-0.7) only to tracks still unassigned, rejecting matches above a distance threshold; treat scores below 0.1 as background. Unmatched tracks keep their last position (no Kalman drift) and are deleted after 60 frames (1 s), which bridges brief occlusions. Export per-frame centroids and keypoints per track.",
+  "sema_category": "Inference",
+  "sema_id": "sema:ConfidenceCascadeTracking#mh:SHA-256:19736fba4c132b16ae36577b7d58b119b1437c16b1ceacb61a484c428fea01a3",
+  "sema_layer": "Mind",
+  "sema_ref": "ConfidenceCascadeTracking#1973",
+  "sema_stub": "1973"
+}

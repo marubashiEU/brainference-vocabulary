@@ -1,0 +1,33 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Memory"
+    ],
+    "ring": 2,
+    "tier": 3
+  },
+  "dependencies": {
+    "composes_with": {
+      "forgetting": "sema:StrategicForgetting#mh:SHA-256:c3342dc2761d5e2ff5e88d80af91ae902cc1c6c3af984c6261570025114fd822",
+      "horizon": "sema:BoundedHorizonEffort#mh:SHA-256:b8e421c208de936bf9ae12283c34a719b0c2eebd45d5e3aaccf9d08790667f4a",
+      "innate": "sema:PersistentInnateState#mh:SHA-256:b0ea99a8db27905b3978d72ab598e80cd3e5b287fd70d1b409cfe6ca5434b59c"
+    }
+  },
+  "failure_modes": [
+    "Transfer of the wrong knowledge is not detected before the predecessor ends",
+    "Losing valuable knowledge that a successor would need"
+  ],
+  "gloss": "Pass useful knowledge to a successor and let the predecessor end",
+  "handle": "GenerationalKnowledgeTransfer",
+  "invariants": [
+    "Transfer is selective",
+    "Each instance has a bounded lifetime"
+  ],
+  "mechanism": "An endlessly learning agent accumulates junk. Ending an instance and passing selected knowledge to a successor applies {{forgetting}} at the lifetime scale: those that transfer wrong knowledge fail to continue. The knowledge sits in the {{innate}} layer that outlives each instance, and the known end gives the instance the effort effect described in {{horizon}}.",
+  "sema_category": "Memory",
+  "sema_id": "sema:GenerationalKnowledgeTransfer#mh:SHA-256:5c5cb066c68f0ae82d4f05869c97e6a539a1b62c3a367204ea77702f7055a7d6",
+  "sema_layer": "Mind",
+  "sema_ref": "GenerationalKnowledgeTransfer#5c5c",
+  "sema_stub": "5c5c"
+}

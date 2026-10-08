@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "path": [
+      "Society",
+      "Economics"
+    ],
+    "ring": 2,
+    "tier": 3
+  },
+  "failure_modes": [
+    "Waiting indefinitely for a release that never covers the need",
+    "Paralysis from every idea seeming subsumable"
+  ],
+  "gloss": "Delay building what the platform vendor is about to ship",
+  "handle": "ObsolescenceHedging",
+  "invariants": [
+    "Build value beyond what the platform will absorb",
+    "Temporary scaffolding is expected to be discarded"
+  ],
+  "mechanism": "Tooling built on top of a fast-moving platform is treated as a temporary solution. Sound ideas migrate into the platform itself, as sub-agent orchestration did. Before building, check whether a known release is imminent and defer work that release would make redundant.",
+  "sema_category": "Economics",
+  "sema_id": "sema:ObsolescenceHedging#mh:SHA-256:7af30451423bd4af2d7a38a50c8d736173e0cdf44b6ff1146a1df64f606a999a",
+  "sema_layer": "Society",
+  "sema_ref": "ObsolescenceHedging#7af3",
+  "sema_stub": "7af3"
+}

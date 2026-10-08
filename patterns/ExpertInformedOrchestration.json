@@ -1,0 +1,33 @@
+{
+  "_meta": {
+    "path": [
+      "Society",
+      "Coordination"
+    ],
+    "ring": 2,
+    "tier": 3
+  },
+  "dependencies": {
+    "composes_with": {
+      "graph": "sema:AgentTransitionGraph#mh:SHA-256:e47085dbeb60c4b6693b562d2ae9dfd0da62dab6f438c0e7873d808446a8c4cf",
+      "router": "sema:RouterIntelligenceParadox#mh:SHA-256:210ace812ff8e04bed205605c04a8666c0ca964a53c7b692cc12e3354f73c187",
+      "tradeoff": "sema:SwarmCostQualityTradeoff#mh:SHA-256:ae7377bd868e7053d57d477f0db591b5fe1e1f73f6bbb51ee8abeac3a15f8191"
+    }
+  },
+  "failure_modes": [
+    "Automating orchestration on too little data",
+    "Cheap routing that misjudges tasks"
+  ],
+  "gloss": "Automate agent orchestration with a probabilistic transition model, guarded by strong routing",
+  "handle": "ExpertInformedOrchestration",
+  "invariants": [
+    "Expert knowledge constrains the learned model",
+    "Routing is decided by the strongest model"
+  ],
+  "mechanism": "The human's job as orchestrator is the frontier bottleneck. To automate it, build an {{graph}} from harness metadata and use it to plan toward target states. Routing decisions stay with a strong model per {{router}}, and cheap workers follow {{tradeoff}}. Expert heuristics act as guardrails on the black-box system.",
+  "sema_category": "Coordination",
+  "sema_id": "sema:ExpertInformedOrchestration#mh:SHA-256:86d64c98ab322702944284e1c4fa978dc0b4877ce155ffd43f6b5411be3680ed",
+  "sema_layer": "Society",
+  "sema_ref": "ExpertInformedOrchestration#86d6",
+  "sema_stub": "86d6"
+}

@@ -1,0 +1,35 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Inference"
+    ],
+    "ring": 1,
+    "tier": 3
+  },
+  "dependencies": {
+    "composes_with": {
+      "compose": "sema:ReversibleComposability#mh:SHA-256:4aa253d2f27878bc64751effe6d21a63aede7e716de423b687ee5ab325905c88",
+      "harness": "sema:HarnessAsArchitecture#mh:SHA-256:8256b27d0644d7a19ab8b2475681704841604bc81604cb1d44c24953e56aed18",
+      "innate": "sema:PersistentInnateState#mh:SHA-256:b0ea99a8db27905b3978d72ab598e80cd3e5b287fd70d1b409cfe6ca5434b59c",
+      "local_rule": "sema:LocalLearningRule#mh:SHA-256:0ab320636ba6462ceb5c334a434578cd4f75e7af08db6ef6e220adb48926477f",
+      "pem": "sema:PredictionErrorMinimization#mh:SHA-256:5a5c8ef472f994f11d8aba5b5c9b40b6c96fea601efab2838cc73ba734244fcc"
+    }
+  },
+  "failure_modes": [
+    "Untested philosophical framings taken for engineering",
+    "No formal statement, so nothing to falsify"
+  ],
+  "gloss": "Intelligence as composable structure with local learning, durable state, and prediction",
+  "handle": "ArchitectureOfIntelligence",
+  "invariants": [
+    "Parts compose through explicit interfaces",
+    "Learning is local, state is durable across instantiations"
+  ],
+  "mechanism": "Rather than one large model, intelligence is built as a {{harness}} of parts that compose through {{compose}} interfaces, learn by {{local_rule}}, minimize errors per {{pem}}, and start each instantiation from a {{innate}} layer. Continual learning, embodiment, and physics- or information-theoretic grounding are the features its proponents cite against a single global learning rule.",
+  "sema_category": "Inference",
+  "sema_id": "sema:ArchitectureOfIntelligence#mh:SHA-256:edd7799600f14ca163e61f6c3e39436564b97cf87e807e2a15abbd8c26820e52",
+  "sema_layer": "Mind",
+  "sema_ref": "ArchitectureOfIntelligence#edd7",
+  "sema_stub": "edd7"
+}

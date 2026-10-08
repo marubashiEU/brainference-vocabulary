@@ -1,0 +1,34 @@
+{
+  "_meta": {
+    "path": [
+      "Society",
+      "Coordination"
+    ],
+    "ring": 2,
+    "source": "book/on_the_origin_of_risk (Timlett 2025), ch. 9 (apoptosis, E. Deeds; moonlighting proteins)",
+    "tier": 3
+  },
+  "dependencies": {
+    "references": {
+      "multi_path_reliability": "sema:MultiPathReliability#mh:SHA-256:6e7b128474c2fdd15a1f1a62087eafeb0f49e8406492ed1e4fa9833f31a14360",
+      "rejection_cost_optionality": "sema:RejectionCostOptionality#mh:SHA-256:6022b7eeb93ba1387dadff24fe74520793152985bd84bdb35eb4fa6cf01a4531"
+    }
+  },
+  "failure_modes": [
+    "Enforcing a clean division of labour and losing the extra functions the overlap carried",
+    "Treating ignored instructions as pure inefficiency without asking what else is being computed",
+    "Treating the gene or individual as the only level of selection"
+  ],
+  "gloss": "Imperfectly aligned, overlapping work packs more functions into the same parts",
+  "handle": "ChimericalComputation",
+  "invariants": [
+    "Components serve more than one level or task at once",
+    "Instructions are executed only in part, by design"
+  ],
+  "mechanism": "Natural computation rarely does one task per component. Doing more of one thing means doing slightly less of another, and the resulting work is entangled. The apoptosis signal channel carries only about 0.92 bits, so not every cell obeys the instruction to self-destruct. This also damps over-reaction to unreliable signals and prevents a whole tissue region dying at once, so cell and cell population are optimised together. Moonlighting and disordered proteins serve several pathways in the same way. Partial non-compliance with instructions is therefore overlapping work at several levels, not only inefficiency, and the reliability lost on each path is recovered through {{multi_path_reliability}}. The friction can hold options, as in {{rejection_cost_optionality}}.",
+  "sema_category": "Coordination",
+  "sema_id": "sema:ChimericalComputation#mh:SHA-256:cedfdeac856dc1d2eb0a2240ea7798dd119927827580865eaf58798838ed75d8",
+  "sema_layer": "Society",
+  "sema_ref": "ChimericalComputation#cedf",
+  "sema_stub": "cedf"
+}

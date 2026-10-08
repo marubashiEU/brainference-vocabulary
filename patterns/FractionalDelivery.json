@@ -1,0 +1,36 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Strategy"
+    ],
+    "ring": 2,
+    "source": "book/on_the_origin_of_risk (Timlett 2025), Technical appendix I (fractional meta-models, endogenous and exogenous stressors)",
+    "tier": 3
+  },
+  "dependencies": {
+    "composes_with": {
+      "residuality_stressor_integration": "sema:ResidualityStressorIntegration#mh:SHA-256:d5c98fe6fcf87a5c022fa5aad3c2b8291de5aa67d477ed6acc6d80b7d88ecbad"
+    },
+    "references": {
+      "rejection_cost_optionality": "sema:RejectionCostOptionality#mh:SHA-256:6022b7eeb93ba1387dadff24fe74520793152985bd84bdb35eb4fa6cf01a4531"
+    }
+  },
+  "failure_modes": [
+    "An over-stressed system carries many fractions that will never be needed",
+    "An under-stressed system has too little prepared to adapt in time",
+    "Reading the friction of partly built function as pure inefficiency and removing it"
+  ],
+  "gloss": "Partly build responses to possible stressors; the cost of carrying them is preparedness",
+  "handle": "FractionalDelivery",
+  "invariants": [
+    "Full delivery and no delivery are special cases of fractional delivery",
+    "Endogenous stress rises with the amount of partly delivered function"
+  ],
+  "mechanism": "Rather than fully building or omitting a response to each possible exogenous stressor, build it fractionally: complete some of the components it needs, such as data carried through two of three pipeline stages. If the stressor arrives, few components remain to change; if it never will, the fraction is removed. Partly built function is an endogenous stress, a carrying cost and a source of friction, but it is also the stored optionality described in {{rejection_cost_optionality}}. The right level of fractional delivery rises with the likelihood of the stressor. It makes the stressor integration of {{residuality_stressor_integration}} cheaper. Fast metrics of endogenous stress, such as today's rejection rate, can signal an exogenous stressor and trigger full delivery.",
+  "sema_category": "Strategy",
+  "sema_id": "sema:FractionalDelivery#mh:SHA-256:a3e4407eeea1b39773703461d2a925c52271117970962f4fb668a8ce70c30d3a",
+  "sema_layer": "Mind",
+  "sema_ref": "FractionalDelivery#a3e4",
+  "sema_stub": "a3e4"
+}

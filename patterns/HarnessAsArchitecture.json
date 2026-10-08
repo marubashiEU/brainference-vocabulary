@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Strategy"
+    ],
+    "ring": 1,
+    "tier": 2
+  },
+  "failure_modes": [
+    "Harness so rigid it removes the freedom that made the model useful",
+    "Harness logic that duplicates what the model provider will soon ship"
+  ],
+  "gloss": "Intelligence lives in the architecture around a static model, not in the model alone",
+  "handle": "HarnessAsArchitecture",
+  "invariants": [
+    "The model weights alone do not change between calls; behavior differences come from the surrounding structure",
+    "Every behavior-shaping element in the harness is explicit and inspectable"
+  ],
+  "mechanism": "A trained model is a static representation. The harness around it (tools, memory, scaffolding, objectives, interfaces) turns it into something that accumulates experience and acts over time. Design effort goes to the interface between model and world, since that is where behavior is shaped.",
+  "sema_category": "Strategy",
+  "sema_id": "sema:HarnessAsArchitecture#mh:SHA-256:8256b27d0644d7a19ab8b2475681704841604bc81604cb1d44c24953e56aed18",
+  "sema_layer": "Mind",
+  "sema_ref": "HarnessAsArchitecture#8256",
+  "sema_stub": "8256"
+}

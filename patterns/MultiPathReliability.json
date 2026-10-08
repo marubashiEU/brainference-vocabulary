@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "path": [
+      "Society",
+      "Coordination"
+    ],
+    "ring": 1,
+    "source": "book/on_the_origin_of_risk (Timlett 2025), ch. 10 (dice, Galton board, apoptosis)",
+    "tier": 1
+  },
+  "failure_modes": [
+    "Diffusion of responsibility among agents who each expect another path to deliver",
+    "Removing redundant noisy pathways in the name of efficiency and creating a single point of failure",
+    "Mistaking illusion of control through one owner for actual reliability"
+  ],
+  "gloss": "Make an outcome reliable through many noisy ways to reach it, not one accountable path",
+  "handle": "MultiPathReliability",
+  "invariants": [
+    "The probability of an outcome rises with the number of distinct paths that reach it",
+    "Individual pathways may be unreliable while the aggregate is reliable"
+  ],
+  "mechanism": "An outcome with many routes to it is more likely than one with a single route, as seven is likelier than double six with two dice, and as balls on a Galton board pile up in the middle. Biological systems get reliable results from many unreliable pathways, such as an apoptosis signal that fires in about 92% of cells. Human organisations prefer one assigned owner with incentives and accountability, which creates a single point of failure. Reliability can instead come from the law of large numbers acting on many partial, overlapping ways of getting the work done.",
+  "sema_category": "Coordination",
+  "sema_id": "sema:MultiPathReliability#mh:SHA-256:6e7b128474c2fdd15a1f1a62087eafeb0f49e8406492ed1e4fa9833f31a14360",
+  "sema_layer": "Society",
+  "sema_ref": "MultiPathReliability#6e7b",
+  "sema_stub": "6e7b"
+}

@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "path": [
+      "Physics",
+      "Primitives"
+    ],
+    "ring": 0,
+    "source": "research/complexity_epistemology; research/what_is_complexity (Arne); research/harness_bodies_death",
+    "tier": 1
+  },
+  "failure_modes": [
+    "Treating a process as irreducible because no shortcut has been found yet",
+    "Assuming a reducible higher level exists because one exists for similar-looking systems",
+    "Knowing the structure mistaken for knowing the dynamics, as with a connectome that maps wiring but not firing"
+  ],
+  "gloss": "Some processes have no shortcut: the only way to know step n is to run n steps",
+  "handle": "ComputationalIrreducibility",
+  "invariants": [
+    "Irreducibility holds even when the rules are fully known and deterministic",
+    "Any exact predictor of an irreducible process takes at least as many steps as the process"
+  ],
+  "mechanism": "For a computationally irreducible process, no procedure predicts its state at step n in fewer steps than the process itself takes. Simple rules can generate such behaviour, as the cellular automaton Rule 110 shows. Reducible processes are the exception: their low-level mechanics produce higher-level regularities, like billiard balls, that a shorter description can capture.",
+  "sema_category": "Primitives",
+  "sema_id": "sema:ComputationalIrreducibility#mh:SHA-256:77eaaa0cb7d5fdf22915b2147d1a9b4061acdd4f45c5297dd8c60ac5bf2fa7f7",
+  "sema_layer": "Physics",
+  "sema_ref": "ComputationalIrreducibility#77ea",
+  "sema_stub": "77ea"
+}

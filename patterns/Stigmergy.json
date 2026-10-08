@@ -1,0 +1,36 @@
+{
+  "_meta": {
+    "path": [
+      "Society",
+      "Coordination"
+    ],
+    "ring": 0,
+    "source": "thesis/do_2026_ant_collective_behavior (Ch. 1.1.1; Ch. 1.1.2 'Stigmergic processes'; Ch. 1.4.2 foraging trails)",
+    "tier": 1
+  },
+  "dependencies": {
+    "references": {
+      "local_rule": "sema:LocalLearningRule#mh:SHA-256:0ab320636ba6462ceb5c334a434578cd4f75e7af08db6ef6e220adb48926477f",
+      "self_organisation": "sema:SelfOrganisation#mh:SHA-256:efc9067bfdfea22ceeed9dba82eb6e4c949a232ddf96fd8c20d07e4f51e03886"
+    }
+  },
+  "failure_modes": [
+    "Runaway reinforcement: positive feedback locks the collective onto a suboptimal trail unless traces decay",
+    "Trace decay too fast for reinforcement to accumulate, so no structure forms",
+    "Corrupted or spoofed traces mislead every agent that reads them",
+    "Attributing coordination to direct communication when it runs through the environment, or the reverse"
+  ],
+  "gloss": "Agents coordinate indirectly by leaving traces in a shared environment that cue later actions",
+  "handle": "Stigmergy",
+  "invariants": [
+    "Agents interact through modifications of a shared medium, not by direct messages",
+    "Traces persist longer than the action that made them",
+    "Each agent responds only to traces available locally"
+  ],
+  "mechanism": "An agent's action modifies the environment (a pheromone mark, a moved grain, an edited file), and the modification becomes a stimulus for later actions by the same or other agents. No message is addressed to anyone; the environment is the communication channel and the memory. With reinforcement, such as successful foragers strengthening a pheromone trail that recruits more foragers who strengthen it further, noisy individual exploration is amplified into coherent structure, an instance of {{self_organisation}}. Each agent still follows a {{local_rule}}: it reads only the traces where it stands. Cognitively limited agents thereby offload memory to the environment, and the trace field records the collective's history without any agent holding it.",
+  "sema_category": "Coordination",
+  "sema_id": "sema:Stigmergy#mh:SHA-256:ab1447ac1f5d08590757b88844c90007e9d468d673ae340d940a97af8e6d7474",
+  "sema_layer": "Society",
+  "sema_ref": "Stigmergy#ab14",
+  "sema_stub": "ab14"
+}

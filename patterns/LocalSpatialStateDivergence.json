@@ -1,0 +1,41 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Inference"
+    ],
+    "ring": 2,
+    "source": "thesis/do_2026_ant_collective_behavior (Ch. 3.1.1, Eqs. 3.1-3.4, Figs. 3.1-3.3; Ch. 4.1, Fig. 4.1; Ch. 5.2)",
+    "tier": 2
+  },
+  "dependencies": {
+    "composes_with": {
+      "jensen_shannon_divergence": "sema:JensenShannonDivergence#mh:SHA-256:b3b4314fee746b1e97b133372bcdb1d9dd1a3a98f90fd19ca19bb47dfef04a6b"
+    },
+    "references": {
+      "instrument_tuning": "sema:MotivatedInstrumentTuning#mh:SHA-256:ed8f6b395512ded44b703cda205982bbb2b6c65e010fc835ea41cebedd7466fb",
+      "null_model": "sema:NullModelBaseline#mh:SHA-256:9d361368a16dd9c0d05cbb9fd851745b75eae2c8608e22ade4801687a80761c4"
+    }
+  },
+  "failure_modes": [
+    "Sign ambiguity: clustering and over-dispersion both raise D_JS against a uniform reference",
+    "Choosing k by maximum regime separation on the same data, a form of {{instrument_tuning}}; report the full sweep",
+    "Treats neighbourhoods as independent samples and ignores persistence and trajectories, so it can rank order but not explain mechanism"
+  ],
+  "gloss": "Classify a crowd's collective state from positions alone, by how far its local neighbourhoods depart from random",
+  "handle": "LocalSpatialStateDivergence",
+  "invariants": [
+    "Uses positions only, with no interaction model",
+    "Empirical and null distributions share the same k, query geometry and agent counts per frame",
+    "Higher D_JS means more spatial structure than uniform placement"
+  ],
+  "mechanism": "A model-free (zeroth-order) measure that needs only positions per frame. At random query points, drawing circles kept inside the observation area, find the k nearest agents, split the circle into four quadrants and record the local state omega = (a1, a2, a3, a4), the count per quadrant. The state space has C(k+3, 3) states. Sample many queries per frame (60) over the whole recording to get the empirical distribution P(omega). Build Q(omega) the same way from a {{null_model}} that places the same number of agents uniformly at random in the same bounds at every frame. The {{jensen_shannon_divergence}} D_JS(P, Q) then measures spatial organisation beyond chance. In fire ant colonies with k = 6, roaming scored 0.035 +/- 0.025, trailing 0.113 +/- 0.037 and aggression 0.229 +/- 0.052 (block permutation p = 0.004). k sets the spatial scale: too small is noise-dominated, too large samples too sparsely. Pushing a synthetic crowd with an attractive or repulsive force F = min(F_max, gamma / r_ij) gives a U-shaped D_JS(gamma), confirming sensitivity to order in either direction.",
+  "preconditions": [
+    "Reliable per-frame positions (a low-variance, rarely occluded body point)"
+  ],
+  "sema_category": "Inference",
+  "sema_id": "sema:LocalSpatialStateDivergence#mh:SHA-256:2b5e93e20a335e9aff9fa14d6d8fc75b3872c759c2e7d331da7af4449062bae3",
+  "sema_layer": "Mind",
+  "sema_ref": "LocalSpatialStateDivergence#2b5e",
+  "sema_stub": "2b5e"
+}

@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "path": [
+      "Society",
+      "Coordination"
+    ],
+    "ring": 2,
+    "tier": 3
+  },
+  "failure_modes": [
+    "Outsiders without any domain anchor",
+    "Anchors dominate and suppress outsider ideas"
+  ],
+  "gloss": "Seed a search with people experienced in unrelated fields plus a few domain experts",
+  "handle": "OutsiderDiversityInjection",
+  "invariants": [
+    "Outsiders bring deep experience elsewhere, not inexperience",
+    "A small domain-expert core anchors the search"
+  ],
+  "mechanism": "Novelty in a problem comes from cross-domain analogy. A group composed of many experts from other fields (a musician, a doctor, a firefighter) plus a handful of domain experts generates interventions that a pure domain group or an inexperienced crowd cannot, because the outsiders bring transferable experience.",
+  "sema_category": "Coordination",
+  "sema_id": "sema:OutsiderDiversityInjection#mh:SHA-256:80fe538d677be13fc8afc5aa3c1829ca0ca3336d083b250be0ad6906a13e6e10",
+  "sema_layer": "Society",
+  "sema_ref": "OutsiderDiversityInjection#80fe",
+  "sema_stub": "80fe"
+}

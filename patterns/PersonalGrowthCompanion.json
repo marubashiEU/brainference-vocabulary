@@ -1,0 +1,35 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Strategy"
+    ],
+    "ring": 2,
+    "tier": 3
+  },
+  "dependencies": {
+    "composes_with": {
+      "felt": "sema:FeltDirectionCheck#mh:SHA-256:eab6b3bd654eda691cc595b523afff3a219498a5dc11ea0fcc84af5290a03dc4",
+      "flow": "sema:EffortlessAction#mh:SHA-256:51723c907410c012aee6cb8d2cbbae8b40e1d7e4bb59919f9ee7fc1478a995d0",
+      "innate": "sema:PersistentInnateState#mh:SHA-256:b0ea99a8db27905b3978d72ab598e80cd3e5b287fd70d1b409cfe6ca5434b59c",
+      "misspec": "sema:GoalMisspecification#mh:SHA-256:ad3fc0c962124b77bf8c79fde1073560cb4f35a0ce257bf829ef938c538a0a3a",
+      "pillars": "sema:FourPillarBaseline#mh:SHA-256:bc68f2229cd3ee1be86b9a5d5847536d05ba764adad18b9f6f1bef938eaf4470"
+    }
+  },
+  "failure_modes": [
+    "Brute-forced schedules that break badly when they fail",
+    "Optimizing for the plan instead of the person"
+  ],
+  "gloss": "A long-lived agent that helps a person choose goals and keep their baseline, without rigid command",
+  "handle": "PersonalGrowthCompanion",
+  "invariants": [
+    "Person, not the agent, owns the goals",
+    "Structure is temporary and habit-building"
+  ],
+  "mechanism": "The companion holds the person's accumulated preferences in a {{innate}} layer across sessions. It helps examine goals against {{misspec}}, keeps the {{pillars}} in order, and prompts a {{felt}} check before actions. Its style follows {{flow}}: a period of structure builds habits, then flexibility returns so the person is not living under a corset.",
+  "sema_category": "Strategy",
+  "sema_id": "sema:PersonalGrowthCompanion#mh:SHA-256:16e08923fde07686a015de9d418911bb2e233ef1e96f063343c161bbc9559ead",
+  "sema_layer": "Mind",
+  "sema_ref": "PersonalGrowthCompanion#16e0",
+  "sema_stub": "16e0"
+}

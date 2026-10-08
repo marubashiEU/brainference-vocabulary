@@ -1,0 +1,33 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Reasoning"
+    ],
+    "ring": 1,
+    "source": "thesis/do_2026_ant_collective_behavior (Ch. 1.2.3-1.2.4, Fig. 1.3; Ch. 4.2.2, Fig. 4.2; Ch. 5.3)",
+    "tier": 1
+  },
+  "dependencies": {
+    "references": {
+      "second_order_network": "sema:SecondOrderInteractionNetwork#mh:SHA-256:8c66021828f4085a9a52154ee1d3d799583c0960c4c7b68ba161377e76083637"
+    }
+  },
+  "failure_modes": [
+    "Concluding that interactions carry no regime information because aggregated measures show none",
+    "Tuning the window size until something separates: too long loses dynamics, too short gives sparse fragmented graphs",
+    "Time-ordered networks keep order but still treat consecutive events as independent, so memory is still lost"
+  ],
+  "gloss": "Pooling interactions over a time window erases the order that distinguishes collective regimes",
+  "handle": "TimeAggregationBlindness",
+  "invariants": [
+    "Aggregation is many-to-one: distinct orderings map to the same graph",
+    "Reachability on the aggregated graph upper-bounds reachability on time-respecting paths"
+  ],
+  "mechanism": "A time-aggregated (first-order) network links two agents if they interacted at least once in a window. Different sequences, a-b then b-c versus b-c then a-b, give the same aggregated graph, so causal chains, memory and who-could-inform-whom vanish; aggregation also overstates reachability, because a message can only travel along time-respecting paths. Measures computed on such graphs can therefore be blind to regime differences that live in timing. In fire ant colonies, degree and spectral entropy densities of aggregated proximity networks could not separate roaming, trailing and aggression (GEE Wald p = 0.42 and 0.37) and the clustering they showed was mostly sample identity (ICC about 0.6-0.8). The remedy is a representation that keeps succession, such as a {{second_order_network}}, or else time-respecting path analysis.",
+  "sema_category": "Reasoning",
+  "sema_id": "sema:TimeAggregationBlindness#mh:SHA-256:84d80e8373570ca5b1a3563abb91c2c7f3570c4135c851ce9f560ec054f15f99",
+  "sema_layer": "Mind",
+  "sema_ref": "TimeAggregationBlindness#84d8",
+  "sema_stub": "84d8"
+}

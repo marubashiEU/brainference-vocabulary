@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "path": [
+      "Society",
+      "Economics"
+    ],
+    "ring": 2,
+    "tier": 3
+  },
+  "failure_modes": [
+    "Underestimating how fast labs move into an adjacent field",
+    "Assuming safety from being different when the lab can simply buy"
+  ],
+  "gloss": "Ventures near a frontier lab risk being absorbed, yet most of the space lies outside its pull",
+  "handle": "LabGravityWell",
+  "invariants": [
+    "Risk grows as the venture approaches the lab's core business",
+    "Labs are constrained by incentives, not only capability"
+  ],
+  "mechanism": "Large labs have strong pull: they buy early startups and their announcements command attention. A venture close to a lab's core faces absorption, but the space of possible approaches is much larger than what any lab covers. Distance from the lab's business model, such as local learning rules and embodiment, lowers the risk.",
+  "sema_category": "Economics",
+  "sema_id": "sema:LabGravityWell#mh:SHA-256:e379085e134d29e6182f2e710101b6eace9da5d4013745f7a5cfc5aad9d6ea10",
+  "sema_layer": "Society",
+  "sema_ref": "LabGravityWell#e379",
+  "sema_stub": "e379"
+}

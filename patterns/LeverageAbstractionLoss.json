@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "path": [
+      "Society",
+      "Roles"
+    ],
+    "ring": 1,
+    "tier": 2
+  },
+  "failure_modes": [
+    "Producing large volumes of output nobody will use",
+    "Losing the ability to judge quality of the work"
+  ],
+  "gloss": "Delegation multiplies reach and removes direct feel for the work",
+  "handle": "LeverageAbstractionLoss",
+  "invariants": [
+    "Leverage amplifies existing intent",
+    "Tactile feedback decreases as layers increase"
+  ],
+  "mechanism": "Each layer of delegation, whether staff or agents, multiplies what one person can accomplish and puts distance between that person and the material. The delegator knows only the handle, not the texture of the thing being moved. Leverage also multiplies the delegator's existing desires and decisions, good or bad.",
+  "sema_category": "Roles",
+  "sema_id": "sema:LeverageAbstractionLoss#mh:SHA-256:1a10b2b3df66e35c5f5dc0381fd24199ef3090c36b7b8ebf011b497a989bad7e",
+  "sema_layer": "Society",
+  "sema_ref": "LeverageAbstractionLoss#1a10",
+  "sema_stub": "1a10"
+}

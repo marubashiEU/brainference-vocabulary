@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "path": [
+      "Society",
+      "Coordination"
+    ],
+    "ring": 1,
+    "tier": 2
+  },
+  "failure_modes": [
+    "Bureaucracy growing exponentially with role count",
+    "Human bottleneck when the coordinator waits on decisions"
+  ],
+  "gloss": "One coordinator, a few lanes, sub-agents beneath, and no rigid org chart",
+  "handle": "CoordinatorLaneTopology",
+  "invariants": [
+    "Only the coordinator plans across lanes",
+    "Human stays in the operator seat"
+  ],
+  "mechanism": "A single coordinator agent holds the plan and talks with the human. It delegates to a small number of lanes, each of which spawns sub-agents for the work. Deeper role hierarchies with CEO and CTO agents add bureaucracy and token waste without better results than simple sub-agent delegation.",
+  "sema_category": "Coordination",
+  "sema_id": "sema:CoordinatorLaneTopology#mh:SHA-256:7e8603daa3abea68c1b860ffbf8839fa5b2f3354f09a14bf9e12bd0554cfd8a0",
+  "sema_layer": "Society",
+  "sema_ref": "CoordinatorLaneTopology#7e86",
+  "sema_stub": "7e86"
+}

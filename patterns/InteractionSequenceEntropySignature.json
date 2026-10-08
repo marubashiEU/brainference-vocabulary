@@ -1,0 +1,45 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Inference"
+    ],
+    "ring": 2,
+    "source": "thesis/do_2026_ant_collective_behavior (Ch. 4.2.3, Figs. 4.3-4.5; Ch. 5.1, 5.3, 5.4)",
+    "tier": 2
+  },
+  "dependencies": {
+    "composes_with": {
+      "degree_entropy": "sema:DegreeEntropy#mh:SHA-256:a793cb859ab1915416e67b257770a97d4810b2ac751247aba715530df2d69297",
+      "entropy_collapse": "sema:EntropyDensityCollapse#mh:SHA-256:0874645031ec2852f52b3a5a1c3980055703036ef7278df3aee69c6359559bb3",
+      "second_order_network": "sema:SecondOrderInteractionNetwork#mh:SHA-256:8c66021828f4085a9a52154ee1d3d799583c0960c4c7b68ba161377e76083637"
+    },
+    "references": {
+      "aggregation_blindness": "sema:TimeAggregationBlindness#mh:SHA-256:84d80e8373570ca5b1a3563abb91c2c7f3570c4135c851ce9f560ec054f15f99",
+      "kinematic_null": "sema:SpatioTemporalNullModel#mh:SHA-256:3576582815f7cac5bb54c54b13d3a0f7cdf0fab3d808480b18b96c12527ce6e5",
+      "spectral_entropy": "sema:SpectralEntropy#mh:SHA-256:d557f8c3d693a0ee6c24c656efb113cf0fab9dabae8c60f5ba1ae076dbc6b79a"
+    }
+  },
+  "failure_modes": [
+    "Generalising from three regimes and ten laboratory colonies to all collective behaviour",
+    "Total degree ignores direction, losing the difference between converging and diverging successions",
+    "Proximity-defined interactions inflate event counts in dense regimes such as aggression",
+    "Over-reading a good spectral collapse that is really a density effect"
+  ],
+  "gloss": "Collective regimes differ in how predictable the next interaction is, and only an order-keeping network shows it",
+  "handle": "InteractionSequenceEntropySignature",
+  "invariants": [
+    "Regimes are compared at matched interaction density, not by raw entropy",
+    "The same pipeline is applied to empirical and null trajectories",
+    "The signature is read from succession structure, so it disappears if order is aggregated away"
+  ],
+  "mechanism": "Build a {{second_order_network}} per short window (3 s), measure its {{degree_entropy}}, and place every window in an {{entropy_collapse}} against interaction density. Degree entropy here is the diversity of possible next interactions: high means many branching, merging successions (low predictability), low means few likely continuations. In fire ant colonies the regimes separated (GEE Wald chi^2(4) = 20.6, p = 0.0004) while the same measures on aggregated networks did not, as {{aggregation_blindness}} predicts. Roaming sat at low interaction density and low entropy density: sparse, predictable chains. As interaction density rises the regimes split: trailing at higher entropy density (branching, merging and redirection along trails) and aggression at lower (long-lived contact bouts with short inspection or avoidance events). A {{kinematic_null}} run through the same pipeline collapsed poorly (R^2 = 0.29 versus 0.68 empirical), so the signature reflects interaction rules and memory, not movement statistics. {{spectral_entropy}} on the same networks collapsed almost perfectly (R^2 = 0.999) but with near-zero exponents, i.e. it mostly tracked density.",
+  "preconditions": [
+    "Identity-preserving tracking dense enough to resolve consecutive interactions"
+  ],
+  "sema_category": "Inference",
+  "sema_id": "sema:InteractionSequenceEntropySignature#mh:SHA-256:8e4b712961babae9592a8b770702ab22cb5aba550eaacceebb80484b087dde36",
+  "sema_layer": "Mind",
+  "sema_ref": "InteractionSequenceEntropySignature#8e4b",
+  "sema_stub": "8e4b"
+}

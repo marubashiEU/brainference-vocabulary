@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "path": [
+      "Physics",
+      "Dynamics"
+    ],
+    "ring": 2,
+    "source": "thesis/do_2026_ant_collective_behavior (Ch. 3.1.2 'Spatio-Temporal Null Model', Eqs. 3.11-3.21; Fig. 4.5)",
+    "tier": 1
+  },
+  "dependencies": {
+    "references": {
+      "null_model_baseline": "sema:NullModelBaseline#mh:SHA-256:9d361368a16dd9c0d05cbb9fd851745b75eae2c8608e22ade4801687a80761c4"
+    }
+  },
+  "failure_modes": [
+    "Pooling kinematics across behavioural regimes blurs regime-specific motion that is itself a product of coordination",
+    "Unmodelled environmental drivers (pheromone fields, food, boundaries) let the null miss structure that is not social",
+    "Too few realisations to estimate the null distribution of the measure"
+  ],
+  "gloss": "Simulate agents that move like the real ones but ignore each other, to test for social structure",
+  "handle": "SpatioTemporalNullModel",
+  "invariants": [
+    "Each synthetic agent moves independently of every other agent",
+    "Marginal speed distribution, speed autocorrelation, speed-dependent turning and entry/exit timeline match the data",
+    "Synthetic trajectories pass through the identical interaction and network pipeline"
+  ],
+  "mechanism": "A {{null_model_baseline}} for trajectory data that keeps individual kinematics and removes coordination. From pooled tracking data estimate: (1) a two-state stationary/moving Markov chain, with an agent stationary when speed < v_min (1 px/frame) and persistence P_SS = N_SS/(N_SS+N_SM), P_SM = N_MM/(N_MM+N_MS); (2) a first-order speed-transition matrix over N_v = 30 speed bins with Laplace smoothing, P[m,n] = (T_mn + eps)/sum_l(T_ml + eps), eps = 0.01; (3) speed-conditioned turning angles, dtheta | v_i ~ N(mu_i, sigma_i^2), so slow agents turn more; (4) entry statistics (x0, y0, v0, theta0) from first appearances. Simulate agents independently: spawn at edges to match the empirical head-count timeline N_a(t), remove those that exit, switch motion state with probabilities 1-P_SS and 1-P_SM, update speed with momentum v_{t+1} = zeta v_t + (1-zeta) v_sampled (zeta = 0.6), give stationary agents U(0, 0.3) px/frame jitter to mimic tracking noise, wrap heading to [-pi, pi], and step x += v cos(theta), y += v sin(theta). Run many realisations (25 per experiment) through the same network construction. Differences that remain are evidence of interaction rules, memory or task allocation rather than motion statistics.",
+  "preconditions": [
+    "Tracked trajectories with stable identities and a speed cutoff that removes non-physical jumps (e.g. 120 px/frame)"
+  ],
+  "sema_category": "Dynamics",
+  "sema_id": "sema:SpatioTemporalNullModel#mh:SHA-256:3576582815f7cac5bb54c54b13d3a0f7cdf0fab3d808480b18b96c12527ce6e5",
+  "sema_layer": "Physics",
+  "sema_ref": "SpatioTemporalNullModel#3576",
+  "sema_stub": "3576"
+}

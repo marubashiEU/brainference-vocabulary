@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Memory"
+    ],
+    "ring": 2,
+    "tier": 3
+  },
+  "failure_modes": [
+    "Durable state drifts from the environment it is applied in",
+    "Confusing session memory with the durable layer"
+  ],
+  "gloss": "A durable initial state survives each short-lived instantiation",
+  "handle": "PersistentInnateState",
+  "invariants": [
+    "Durable state outlives any single instantiation",
+    "Instantiation-specific behavior is built on top of the durable state"
+  ],
+  "mechanism": "Separate the enduring layer, which carries accumulated impressions and initial dispositions across instantiations, from the transient layer that acts in one session. Each instantiation starts from the durable state and adds to it. Applications differ per instantiation while the underlying capacity persists, as a person from thousands of years ago would function normally if raised today.",
+  "sema_category": "Memory",
+  "sema_id": "sema:PersistentInnateState#mh:SHA-256:b0ea99a8db27905b3978d72ab598e80cd3e5b287fd70d1b409cfe6ca5434b59c",
+  "sema_layer": "Mind",
+  "sema_ref": "PersistentInnateState#b0ea",
+  "sema_stub": "b0ea"
+}

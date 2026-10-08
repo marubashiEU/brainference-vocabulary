@@ -1,0 +1,34 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Strategy"
+    ],
+    "ring": 2,
+    "source": "book/on_the_origin_of_risk (Timlett 2025), Technical appendix I, reading of B. O'Reilly, Residues (2024)",
+    "tier": 2
+  },
+  "dependencies": {
+    "references": {
+      "meta_modularity": "sema:MetaModularity#mh:SHA-256:b97e135e49a64811d5b909f338e4f9034642d7fb07386d724548dd2b83302597"
+    }
+  },
+  "failure_modes": [
+    "Collapsing the stressors into a ranked requirements list, which turns the process back into a single prediction",
+    "Generating only realistic stressors, so diversity stays low",
+    "Ignoring the cost of integration and never reaching the point of generalisation"
+  ],
+  "gloss": "Design for many arbitrary stressors directly in the structure, skipping a forecast of the future",
+  "handle": "ResidualityStressorIntegration",
+  "invariants": [
+    "Stressors need only be possible, not probable",
+    "Diverse stressor information is integrated into structure, never averaged into one prediction",
+    "The stopping point is found by experiment, not derived from a probability distribution"
+  ],
+  "mechanism": "Following Barry O'Reilly's residuality theory, generate many stressors without estimating their probability, deliberately including absurd ones such as a dragon attacking the city, to maximise model diversity. For each stressor, find the change it would force on each component and integrate these residues directly into the design, for example with an incidence matrix of stressors against components that shows which components should share robust structure. No intermediate predictive model of the world is formed, so incompatible scenarios can coexist in one structure, as {{meta_modularity}} and a bet-hedged seed allow. Stop when a fresh round of stressors is survived without change, the emergent generalisation Kauffman found in Boolean networks, or when integration costs too much.",
+  "sema_category": "Strategy",
+  "sema_id": "sema:ResidualityStressorIntegration#mh:SHA-256:d5c98fe6fcf87a5c022fa5aad3c2b8291de5aa67d477ed6acc6d80b7d88ecbad",
+  "sema_layer": "Mind",
+  "sema_ref": "ResidualityStressorIntegration#d5c9",
+  "sema_stub": "d5c9"
+}

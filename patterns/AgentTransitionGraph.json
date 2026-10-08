@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Strategy"
+    ],
+    "ring": 2,
+    "tier": 3
+  },
+  "failure_modes": [
+    "State space larger than assumed",
+    "Distribution shift makes past transitions misleading"
+  ],
+  "gloss": "Model an agent system's actions as a weighted state graph and plan backwards from a goal state",
+  "handle": "AgentTransitionGraph",
+  "invariants": [
+    "Edge weights come from observed harness data",
+    "State space is bounded enough to inspect"
+  ],
+  "mechanism": "Record metadata from an agentic harness (tool calls, context injections, commands to sub-agents) and build a decision graph in which each edge carries the probability that the system moves from one state to the next. Given a current state A and a desired state D, walk the graph backwards to find the likeliest path and steer the orchestration along it.",
+  "sema_category": "Strategy",
+  "sema_id": "sema:AgentTransitionGraph#mh:SHA-256:e47085dbeb60c4b6693b562d2ae9dfd0da62dab6f438c0e7873d808446a8c4cf",
+  "sema_layer": "Mind",
+  "sema_ref": "AgentTransitionGraph#e470",
+  "sema_stub": "e470"
+}

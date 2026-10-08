@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Inference"
+    ],
+    "ring": 1,
+    "tier": 2
+  },
+  "failure_modes": [
+    "Reducing surprise by avoiding all novelty",
+    "Model complexity that exceeds the compute available to run it"
+  ],
+  "gloss": "A system stays viable by continually predicting inputs and reducing surprise",
+  "handle": "PredictionErrorMinimization",
+  "invariants": [
+    "The system carries an explicit or implicit prediction of incoming signals",
+    "Mismatch between prediction and input drives adaptation"
+  ],
+  "mechanism": "A system holds a model of what comes next, compares it with what arrives, and adjusts either its model or its actions to reduce the mismatch. Variational free energy minimization and the principle of least action are candidate first-principles framings of this drive.",
+  "sema_category": "Inference",
+  "sema_id": "sema:PredictionErrorMinimization#mh:SHA-256:5a5c8ef472f994f11d8aba5b5c9b40b6c96fea601efab2838cc73ba734244fcc",
+  "sema_layer": "Mind",
+  "sema_ref": "PredictionErrorMinimization#5a5c",
+  "sema_stub": "5a5c"
+}

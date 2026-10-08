@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Inference"
+    ],
+    "ring": 2,
+    "tier": 3
+  },
+  "failure_modes": [
+    "Over-engineered persona that increases the mismatch",
+    "Long generic answers to short questions"
+  ],
+  "gloss": "Conversation with an agent feels wrong when the illusion of a person breaks",
+  "handle": "ChatUncannyValley",
+  "invariants": [
+    "Naturalness depends on knowing the conversation partner",
+    "The break appears as a mismatch between expected and actual behavior"
+  ],
+  "mechanism": "As a chat agent approaches natural conversation, small inconsistencies (length that does not match how a teammate would answer, no memory of the user, generic advice) break the illusion and feel unsettling. Cookie-cutter filters and system prompts cannot fix it because the deficit is missing knowledge of who is being talked to.",
+  "sema_category": "Inference",
+  "sema_id": "sema:ChatUncannyValley#mh:SHA-256:930c15dd8f5aa4efd4f678ff7b8cbeff8cd178e4e766e6d2e42682df3f584c98",
+  "sema_layer": "Mind",
+  "sema_ref": "ChatUncannyValley#930c",
+  "sema_stub": "930c"
+}

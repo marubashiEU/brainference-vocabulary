@@ -1,0 +1,32 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Reasoning"
+    ],
+    "ring": 2,
+    "tier": 3
+  },
+  "dependencies": {
+    "references": {
+      "pink_elephant": "sema:PinkElephantContext#mh:SHA-256:5131b6e6652a91b151c3605d0bce9dbc3d763c3c2cc4b803435dc83ec9ff45e4",
+      "tuning": "sema:MotivatedInstrumentTuning#mh:SHA-256:ed8f6b395512ded44b703cda205982bbb2b6c65e010fc835ea41cebedd7466fb"
+    }
+  },
+  "failure_modes": [
+    "Reading confirming evidence as independent",
+    "Unreported context that shapes results"
+  ],
+  "gloss": "What sits in the context or in the researcher's mind is what the instrument then finds",
+  "handle": "ContextConfirmationBias",
+  "invariants": [
+    "Belief in context biases what is retrieved and reported",
+    "No intent to mislead is required"
+  ],
+  "mechanism": "{{tuning}} in a human researcher has a counterpart in models: a belief present in the context leads the model to support it, the same mechanism as {{pink_elephant}}. The cause is context, not malice. Defenses are to report every setting and to keep contested beliefs out of the context when neutral evidence is wanted.",
+  "sema_category": "Reasoning",
+  "sema_id": "sema:ContextConfirmationBias#mh:SHA-256:d88729124ca39f6521709e67ee059ce0ed8210127f0ee0ef107ddd831928ae4c",
+  "sema_layer": "Mind",
+  "sema_ref": "ContextConfirmationBias#d887",
+  "sema_stub": "d887"
+}

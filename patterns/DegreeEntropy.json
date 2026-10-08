@@ -1,0 +1,34 @@
+{
+  "_meta": {
+    "path": [
+      "Infrastructure",
+      "Primitives"
+    ],
+    "ring": 1,
+    "source": "thesis/do_2026_ant_collective_behavior (Ch. 1.3.3, Eqs. 1.6-1.7; Ch. 3.2.2, Eq. 3.26)",
+    "tier": 1
+  },
+  "dependencies": {
+    "references": {
+      "shannon_entropy": "sema:ShannonEntropy#mh:SHA-256:a1774e05a3085b62748089790da6da7581e12e1144cab18adf622cb9059b1142"
+    }
+  },
+  "failure_modes": [
+    "Comparing raw H_d across networks of different size and mistaking size for structure",
+    "Using total degree on a directed graph and losing the asymmetry between incoming and outgoing links",
+    "Confusing this node-share form with the entropy of the degree distribution P(k)"
+  ],
+  "gloss": "Entropy of how connectivity is spread over the nodes of a network: local heterogeneity",
+  "handle": "DegreeEntropy",
+  "invariants": [
+    "Computed from the degree sequence alone, ignoring which nodes are linked to which",
+    "Maximal when all degrees are equal, minimal when connectivity is concentrated",
+    "Grows with node count, so raw values are not comparable across networks of different size"
+  ],
+  "mechanism": "For a network with N nodes and degree sequence k_1..k_N, normalise each node's share of all links, p_i = k_i / sum_j k_j, and take H_d = -sum_i p_i log2 p_i, the {{shannon_entropy}} of that share. H_d is maximal (log2 N) when every node has the same degree and falls as connectivity concentrates on a few hubs. It measures how evenly interaction opportunities are distributed, i.e. the diversity of local pathways. For a directed graph, k_i can be the total degree (in-degree plus out-degree), which discards direction. Note that p_i runs over nodes, not over degree classes, so H_d also grows with N; normalise by N or by an area to compare networks of different size.",
+  "sema_category": "Primitives",
+  "sema_id": "sema:DegreeEntropy#mh:SHA-256:a793cb859ab1915416e67b257770a97d4810b2ac751247aba715530df2d69297",
+  "sema_layer": "Infrastructure",
+  "sema_ref": "DegreeEntropy#a793",
+  "sema_stub": "a793"
+}

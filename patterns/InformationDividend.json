@@ -1,0 +1,33 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Strategy"
+    ],
+    "ring": 1,
+    "source": "research/on_the_origin_of_risk (Weather Agent)",
+    "tier": 2
+  },
+  "failure_modes": [
+    "Locking scope to protect an estimate and forfeiting the dividend the estimate was meant to enable",
+    "Adding inertia and smoothing to reliable information, the right response only to noisy information",
+    "Chasing short-range signals when transition costs exceed the gain"
+  ],
+  "gloss": "Acting on short-range information pays even when the long-range forecast is exactly right",
+  "handle": "InformationDividend",
+  "invariants": [
+    "The dividend does not depend on uncertainty about the long-range forecast",
+    "No dividend exists when the short-range forecast is a scaled copy of the long-range one",
+    "Transition costs must be below the difference between short- and long-range information"
+  ],
+  "mechanism": "An agent that relocates on daily information collects a payoff that survives a perfectly accurate long-range forecast, because a ten-day forecast of 80% sun still does not say which hours are sunny. The dividend requires two conditions: the short-range distribution is non-fractal, so it is not a shrunk copy of the long-range one, and transition costs are low enough to be worth paying. Plan high-level quantities as precisely as possible and leave everything below free to move.",
+  "preconditions": [
+    "Short-range information is reliable enough to act on",
+    "Scope below the planned level can change without breaking the high-level estimate"
+  ],
+  "sema_category": "Strategy",
+  "sema_id": "sema:InformationDividend#mh:SHA-256:c78d682d828c0e7ff7599c5f3bd7f7d09e7f6b749766e5404a3c009ecda3c189",
+  "sema_layer": "Mind",
+  "sema_ref": "InformationDividend#c78d",
+  "sema_stub": "c78d"
+}

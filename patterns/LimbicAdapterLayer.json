@@ -1,0 +1,35 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Inference"
+    ],
+    "ring": 2,
+    "tier": 3
+  },
+  "dependencies": {
+    "composes_with": {
+      "buckets": "sema:LeakyModulatorBuckets#mh:SHA-256:2a558c9d2cef416d077fd947a3b12cfa8bad82614f5518160078744c300f778a",
+      "narrative": "sema:NarrativeStateInjection#mh:SHA-256:788991b0f28ec54c847a05f7a393c25fed91259a722f247fde75a26147cff757"
+    },
+    "references": {
+      "harness": "sema:HarnessAsArchitecture#mh:SHA-256:8256b27d0644d7a19ab8b2475681704841604bc81604cb1d44c24953e56aed18"
+    }
+  },
+  "failure_modes": [
+    "Modulation that the model ignores",
+    "Modulator levels that drift from real situations"
+  ],
+  "gloss": "A modulating layer between a large model and the user shifts its behavior with affective state",
+  "handle": "LimbicAdapterLayer",
+  "invariants": [
+    "The layer is separate from the reasoning model",
+    "State passes to the model as {{narrative}}, not as numbers"
+  ],
+  "mechanism": "A layer sits between the large reasoning model and the person. It holds {{buckets}}, updated from camera and transcript events, and converts their levels into behavior changes such as temperature. Its state reaches the model as a story via {{narrative}}. The layer is a small trainable part of the {{harness}} and can be modified while the large model stays fixed.",
+  "sema_category": "Inference",
+  "sema_id": "sema:LimbicAdapterLayer#mh:SHA-256:1ce262351d050da98904bd0a2fe64a23de6a4d8b1d4da17e4c3056c70539835c",
+  "sema_layer": "Mind",
+  "sema_ref": "LimbicAdapterLayer#1ce2",
+  "sema_stub": "1ce2"
+}

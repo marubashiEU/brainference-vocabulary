@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Strategy"
+    ],
+    "ring": 1,
+    "source": "book/on_the_origin_of_risk (Timlett 2025), ch. 2 (arrow, Pisa, fuzzy JPEG, royalties, delivery drone)",
+    "tier": 1
+  },
+  "dependencies": {
+    "references": {
+      "meta_modularity": "sema:MetaModularity#mh:SHA-256:b97e135e49a64811d5b909f338e4f9034642d7fb07386d724548dd2b83302597",
+      "shape_mass_information": "sema:ShapeMassInformation#mh:SHA-256:0b9e0ab984495e4958bb5a66b8e5062dd3123d4dc78140944a19b2c43c6e9266"
+    }
+  },
+  "failure_modes": [
+    "Committing to a large investment without knowing its final scale",
+    "Correcting with feedback from the same model, which cannot detect that the target itself is wrong",
+    "Assuming tolerance for absolute error grows as fast as the wealth or mass under management"
+  ],
+  "gloss": "A fixed error rate in frozen information grows in absolute size with the mass invested in it",
+  "handle": "MassAmplifiedError",
+  "invariants": [
+    "The absolute error grows with mass even when the percentage error is constant",
+    "More ambitious targets demand either more accurate initial information or correction during growth"
+  ],
+  "mechanism": "When mass is added to information fixed at one moment, as in {{shape_mass_information}}, the error rate stays constant but the absolute error grows with the mass. An arrow misses by more at longer range, a slightly leaning tower leans further as floors are added, an enlarged photo blurs, and a royalty line with a wrong payee loses more as more money flows through it. An acceptable error per unit of mass can be set in advance only if the total mass is known in advance. When it is not, corrective information must be added as mass is added, and it must come from an overlapping but different model, in the manner of {{meta_modularity}}, because re-checking with the model that made the shape repeats its systematic errors.",
+  "preconditions": [
+    "Mass is invested in information fixed at a point in time"
+  ],
+  "sema_category": "Strategy",
+  "sema_id": "sema:MassAmplifiedError#mh:SHA-256:94579642fc6f6fcdce2dbf3ef6916bd6456e0f7743a0d135f4f838e9101b0902",
+  "sema_layer": "Mind",
+  "sema_ref": "MassAmplifiedError#9457",
+  "sema_stub": "9457"
+}

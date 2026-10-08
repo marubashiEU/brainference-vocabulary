@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "path": [
+      "Society",
+      "Coordination"
+    ],
+    "ring": 1,
+    "source": "thesis/do_2026_ant_collective_behavior (Ch. 1.1.1 'The Superorganism as a Complex Adaptive System'; Ch. 1.4.1)",
+    "tier": 2
+  },
+  "dependencies": {
+    "composes_with": {
+      "coevolution": "sema:AdaptiveNetworkCoevolution#mh:SHA-256:e5886df4ff8a4bf9d1a5c5941c0f7a2d0f20263aae354cf34be2fedac2572ba2",
+      "stigmergy": "sema:Stigmergy#mh:SHA-256:ab1447ac1f5d08590757b88844c90007e9d468d673ae340d940a97af8e6d7474"
+    },
+    "references": {
+      "colony_intelligence": "sema:ColonyIntelligence#mh:SHA-256:234d2312acb9b206857122827d0a235ce502add44a9bf2424186f4333c1c79d9",
+      "self_organisation": "sema:SelfOrganisation#mh:SHA-256:efc9067bfdfea22ceeed9dba82eb6e4c949a232ddf96fd8c20d07e4f51e03886"
+    }
+  },
+  "failure_modes": [
+    "Explaining a colony trait by one worker's rule and ignoring the integration that produces it",
+    "Treating workers as identical, which removes the heterogeneity that stabilises responses",
+    "Over-extending the analogy: a colony lacks the tight physiological integration of an organism, and the CAS mapping depends on how interactions are defined"
+  ],
+  "gloss": "A colony whose integrated parts function, and are selected, as one higher-level organism",
+  "handle": "Superorganism",
+  "invariants": [
+    "The colony, not the worker, is the unit at which function and fitness are assessed",
+    "No worker holds colony-level information or control",
+    "Worker heterogeneity is part of the design, not noise to be averaged out"
+  ],
+  "mechanism": "Treat a eusocial colony (queens, non-reproductive workers, a shared communication system, a shared reproductive investment) as a single higher-level unit: a complex adaptive system whose fitness is measured meaningfully only for the whole. Workers have little colony-wide information, yet the colony allocates labour, adjusts trail geometry around obstacles and redeploys workers to defence, through {{colony_intelligence}} and {{self_organisation}}. Three features carry the coherence: indirect coordination through the environment ({{stigmergy}}); {{coevolution}} between worker states (foraging, defending) and the interaction network; and inter-individual heterogeneity in thresholds, size caste and mobility, which damps overreaction because not every worker responds to the same transient signal. Selection can act at several levels at once, and colony traits must be explained by these colony-level mechanisms, not by summing individual rules.",
+  "sema_category": "Coordination",
+  "sema_id": "sema:Superorganism#mh:SHA-256:e55b795f4134b2dd62491ed796682f279772a5c8c717881bb0cb2a622dfab098",
+  "sema_layer": "Society",
+  "sema_ref": "Superorganism#e55b",
+  "sema_stub": "e55b"
+}

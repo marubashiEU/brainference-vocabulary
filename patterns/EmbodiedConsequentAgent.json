@@ -1,0 +1,32 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Inference"
+    ],
+    "ring": 2,
+    "tier": 3
+  },
+  "dependencies": {
+    "composes_with": {
+      "limbic": "sema:LimbicAdapterLayer#mh:SHA-256:1ce262351d050da98904bd0a2fe64a23de6a4d8b1d4da17e4c3056c70539835c",
+      "stake": "sema:IrreversibleStake#mh:SHA-256:7e7f2b34d91c47f643a91d21147e3258e077846277c50c58fbd1a107879cc7e5"
+    }
+  },
+  "failure_modes": [
+    "Agent drifts beyond human understanding and the connection is lost",
+    "Irreversible loss of a working configuration"
+  ],
+  "gloss": "An agent with a body and irreplaceable state, so its actions matter to it",
+  "handle": "EmbodiedConsequentAgent",
+  "invariants": [
+    "Body limits where and how the agent acts",
+    "State cannot be copied once it has been changed by experience"
+  ],
+  "mechanism": "The agent lives on small hardware with a physical presence, has a {{limbic}} that shifts behavior with events, and is retrained in a way that carries {{stake}}: the resulting weights are unique and cannot be restored. Consequences for the agent then exist for actions such as dropping it or treating it kindly. Learning must remain open enough to grow and constrained enough that humans still understand it.",
+  "sema_category": "Inference",
+  "sema_id": "sema:EmbodiedConsequentAgent#mh:SHA-256:e1af1c30b2256a6d0d0648e1956b5c4d48f835c919d26bc21ecbccaec7cc2579",
+  "sema_layer": "Mind",
+  "sema_ref": "EmbodiedConsequentAgent#e1af",
+  "sema_stub": "e1af"
+}

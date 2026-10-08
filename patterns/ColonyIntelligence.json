@@ -1,0 +1,31 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Inference"
+    ],
+    "ring": 2,
+    "tier": 3
+  },
+  "dependencies": {
+    "references": {
+      "local_rule": "sema:LocalLearningRule#mh:SHA-256:0ab320636ba6462ceb5c334a434578cd4f75e7af08db6ef6e220adb48926477f"
+    }
+  },
+  "failure_modes": [
+    "Reading design into what is only aggregate statistics",
+    "Missing the mechanism that turns noise into signal"
+  ],
+  "gloss": "Colony-level adaptive behavior emerges from individual agents following local rules",
+  "handle": "ColonyIntelligence",
+  "invariants": [
+    "No unit holds the global plan",
+    "Signal recognition precedes accumulation"
+  ],
+  "mechanism": "Ants act by {{local_rule}} and no ant holds the colony plan, yet the colony adapts. A mechanism must recognize signal in noise and then build on top of it. Understanding how random information starts to make sense to a collection of simple units is the open question, in biological and artificial systems alike.",
+  "sema_category": "Inference",
+  "sema_id": "sema:ColonyIntelligence#mh:SHA-256:234d2312acb9b206857122827d0a235ce502add44a9bf2424186f4333c1c79d9",
+  "sema_layer": "Mind",
+  "sema_ref": "ColonyIntelligence#234d",
+  "sema_stub": "234d"
+}

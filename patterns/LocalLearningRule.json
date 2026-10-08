@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Inference"
+    ],
+    "ring": 1,
+    "tier": 2
+  },
+  "failure_modes": [
+    "Local rules that never compose into useful global behavior",
+    "Emergent behavior that cannot be interpreted or steered from outside"
+  ],
+  "gloss": "Each unit updates from locally available signals, not a global objective",
+  "handle": "LocalLearningRule",
+  "invariants": [
+    "No unit requires access to the global objective to update",
+    "Global behavior is a consequence of local updates, not specified directly"
+  ],
+  "mechanism": "Individual units (neurons, cells, agents) adapt their own state using only information available at their location, such as neighbor activity or local prediction error. Global behavior emerges from many local updates rather than from one top-down loss propagated through the whole system.",
+  "sema_category": "Inference",
+  "sema_id": "sema:LocalLearningRule#mh:SHA-256:0ab320636ba6462ceb5c334a434578cd4f75e7af08db6ef6e220adb48926477f",
+  "sema_layer": "Mind",
+  "sema_ref": "LocalLearningRule#0ab3",
+  "sema_stub": "0ab3"
+}

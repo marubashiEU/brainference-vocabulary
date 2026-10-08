@@ -1,0 +1,27 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Strategy"
+    ],
+    "ring": 1,
+    "source": "research/founder_strategies_from_biology",
+    "tier": 2
+  },
+  "failure_modes": [
+    "The side search consumes the core activity that funds it",
+    "Only the shortest path is followed, so the periphery is never examined"
+  ],
+  "gloss": "Explore the edges of your main model on time and resources paid for by something else",
+  "handle": "ParasiticSearch",
+  "invariants": [
+    "The core activity keeps paying for itself while the search runs",
+    "The search targets the periphery of the current model, not a replacement for it"
+  ],
+  "mechanism": "A system that is already being paid to pursue a core goal, through revenue, investment or a funded mandate, uses part of that activity to search its periphery for other options. Tooling, assets and skills built for the core goal are examined for other uses. The search is named after SETI listening on telescope time funded for other purposes.",
+  "sema_category": "Strategy",
+  "sema_id": "sema:ParasiticSearch#mh:SHA-256:484b5fd0bd35f8b9a79a32971fb0bde9611e533921bc219add0467730082f877",
+  "sema_layer": "Mind",
+  "sema_ref": "ParasiticSearch#484b",
+  "sema_stub": "484b"
+}

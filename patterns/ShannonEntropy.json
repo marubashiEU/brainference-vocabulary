@@ -1,0 +1,32 @@
+{
+  "_meta": {
+    "path": [
+      "Infrastructure",
+      "Primitives"
+    ],
+    "ring": 0,
+    "source": "thesis/do_2026_ant_collective_behavior (Ch. 1.3.1, Eqs. 1.3-1.5)",
+    "tier": 0
+  },
+  "failure_modes": [
+    "State-space dependence: the same system yields different entropies under different state definitions or binnings, so values are comparable only within one state space",
+    "Finite-sample bias: entropy estimated from few samples is biased low",
+    "Reading low entropy as 'good order' without asking what constrains it"
+  ],
+  "gloss": "The average surprise of a distribution: how many bits it takes to predict an outcome",
+  "handle": "ShannonEntropy",
+  "invariants": [
+    "H is non-negative and zero only for a distribution concentrated on one state",
+    "H is maximal for the uniform distribution over the state space",
+    "H depends only on the probabilities, not on what the states are or how they are ordered"
+  ],
+  "mechanism": "For a discrete distribution P = {p_i} over states i, H(P) = -sum_i p_i log p_i, the expected self-information -log p_i of an outcome. Rare outcomes carry much information, likely ones little. H is maximal (log m for m states) when all states are equally likely and zero when all probability sits on one state. Applied to a system's possible configurations, high H means many weakly constrained configurations (variability, flexibility, exploration) and low H means strong constraints (regularity, coordination). Use log base 2 to measure in bits.",
+  "preconditions": [
+    "A discrete state space has been defined and outcomes can be counted into it"
+  ],
+  "sema_category": "Primitives",
+  "sema_id": "sema:ShannonEntropy#mh:SHA-256:a1774e05a3085b62748089790da6da7581e12e1144cab18adf622cb9059b1142",
+  "sema_layer": "Infrastructure",
+  "sema_ref": "ShannonEntropy#a177",
+  "sema_stub": "a177"
+}

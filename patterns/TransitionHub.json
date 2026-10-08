@@ -1,0 +1,33 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Strategy"
+    ],
+    "ring": 1,
+    "source": "book/on_the_origin_of_risk (Timlett 2025), ch. 5 (Café state, PicBreeder, squash court)",
+    "tier": 2
+  },
+  "dependencies": {
+    "references": {
+      "information_dividend": "sema:InformationDividend#mh:SHA-256:c78d682d828c0e7ff7599c5f3bd7f7d09e7f6b749766e5404a3c009ecda3c189"
+    }
+  },
+  "failure_modes": [
+    "Mistaking a hub for a hedge and never moving from it",
+    "Judging an intermediate state by its own payoff and discarding it",
+    "Holding a hub in an environment too stable to repay the lower payoff"
+  ],
+  "gloss": "Occupy a state from which many valuable states are cheap to reach",
+  "handle": "TransitionHub",
+  "invariants": [
+    "A hub's value lies in the transitions it makes cheap, not in its own payoff",
+    "The value is realised only by moving after new information arrives"
+  ],
+  "mechanism": "Some states are worth occupying not for their own payoff but because they lower the cost of moving to many other valuable states. A café between home and park, the centre of a squash court, and PicBreeder parent images that breed into skulls and cars all work this way. A hub raises the {{information_dividend}} by cutting transition costs. It differs from a hedge: a hedge is a static allocation across positions, while a hub pays only when the occupant actually moves in response to information.",
+  "sema_category": "Strategy",
+  "sema_id": "sema:TransitionHub#mh:SHA-256:07981d492ee9dd08ac568af13f1342f2fd2d22353bc67dcd32c5cfe3d1e7211c",
+  "sema_layer": "Mind",
+  "sema_ref": "TransitionHub#0798",
+  "sema_stub": "0798"
+}

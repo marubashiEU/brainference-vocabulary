@@ -1,0 +1,33 @@
+{
+  "_meta": {
+    "path": [
+      "Society",
+      "Coordination"
+    ],
+    "ring": 1,
+    "source": "book/on_the_origin_of_risk (Timlett 2025), ch. 7 (Vector Option Timeline, Gantt chart limits)",
+    "tier": 2
+  },
+  "dependencies": {
+    "references": {
+      "information_dividend": "sema:InformationDividend#mh:SHA-256:c78d682d828c0e7ff7599c5f3bd7f7d09e7f6b749766e5404a3c009ecda3c189"
+    }
+  },
+  "failure_modes": [
+    "A rigid schedule across many teams whose availability is uneven, so conflicts become certain as the team count grows",
+    "Locking scope to protect an estimate and losing the value the estimate was meant to enable",
+    "Treating unused options as waste and dropping the capacity to respond"
+  ],
+  "gloss": "Plan resources as a forecast, plan tasks as options that stay open at every level",
+  "handle": "OptionVectorPlanning",
+  "invariants": [
+    "Resource forecasts and task sequences are planned separately",
+    "Options exist at every level of zoom; the fixed sequence is an artefact of the chart"
+  ],
+  "mechanism": "Separate two predictions that a Gantt chart merges: the long-range resources a goal needs, which should be forecast as precisely as possible, and the exact tasks that will spend them, which should stay free to change. Map the work as a preferred path with option vectors branching at decision points, each with an activation cost. As a decision point approaches, information about an option's real value becomes reliable, and the option is activated if it beats the preferred path, which collects the {{information_dividend}}. Options exist at every level, because a manager's non-negotiable milestone is one level up a preferred option. A plan is judged by its counterfactual curve: the salient options it kept alive, even unused.",
+  "sema_category": "Coordination",
+  "sema_id": "sema:OptionVectorPlanning#mh:SHA-256:c64f9e78a045da1a75c8e59f68c4130c75306786196f314513197bd08db9d7ba",
+  "sema_layer": "Society",
+  "sema_ref": "OptionVectorPlanning#c64f",
+  "sema_stub": "c64f"
+}

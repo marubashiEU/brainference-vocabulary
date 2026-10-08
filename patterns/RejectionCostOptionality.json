@@ -1,0 +1,27 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Inference"
+    ],
+    "ring": 2,
+    "source": "research/on_the_origin_of_risk (Friction as stored optionality; apoptosis channel)",
+    "tier": 3
+  },
+  "failure_modes": [
+    "Reading meaningful rejection as noise and engineering it away",
+    "Efficiency drives that remove friction and with it the capacity to adapt"
+  ],
+  "gloss": "The cheaper a system rejects options, the more alternatives it can afford to entertain",
+  "handle": "RejectionCostOptionality",
+  "invariants": [
+    "Two processes with the same entropy rate can differ widely in the cost of rejecting",
+    "Rejected inputs remain reachable by small adjustments to the acceptor"
+  ],
+  "mechanism": "Treat a channel as computational: it rejects inputs meaningfully instead of corrupting them. Its entropy rate, bits submitted per bit accepted, measures work done, not information lost. What decides adaptability is not the rejection rate but the cost of each rejection. Rejected inputs are proximate options, already produced by a generator that carries information about them, and reachable by small changes to the acceptor. Friction between generator and acceptor is therefore stored optionality.",
+  "sema_category": "Inference",
+  "sema_id": "sema:RejectionCostOptionality#mh:SHA-256:6022b7eeb93ba1387dadff24fe74520793152985bd84bdb35eb4fa6cf01a4531",
+  "sema_layer": "Mind",
+  "sema_ref": "RejectionCostOptionality#6022",
+  "sema_stub": "6022"
+}

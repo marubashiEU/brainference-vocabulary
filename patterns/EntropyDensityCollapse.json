@@ -1,0 +1,42 @@
+{
+  "_meta": {
+    "path": [
+      "Physics",
+      "Dynamics"
+    ],
+    "ring": 1,
+    "source": "thesis/do_2026_ant_collective_behavior (Ch. 3.3, Eqs. 3.27-3.28, Fig. 3.6; Ch. 4.2.1; Ch. 5.4)",
+    "tier": 2
+  },
+  "dependencies": {
+    "composes_with": {
+      "clustered_testing": "sema:ClusteredObservationTesting#mh:SHA-256:5f8e39deca5c4095ede80f05bb368d0ded5efb22e397d75aad53ce7d217866cf",
+      "null_model": "sema:NullModelBaseline#mh:SHA-256:9d361368a16dd9c0d05cbb9fd851745b75eae2c8608e22ade4801687a80761c4"
+    }
+  },
+  "failure_modes": [
+    "Trivial collapse: R^2 near 1 with exponents near 0 because the measure is dominated by density, not structure",
+    "Broad exponent confidence intervals spanning zero signal that no scaling relation is present",
+    "Narrow density range from short laboratory windows leaves the scaling function poorly constrained",
+    "Taking a good collapse as proof of universality when between-sample variance (ICC) is high"
+  ],
+  "gloss": "Rescale entropy and density by system size until all samples fall on one curve, then read regimes from the residue",
+  "handle": "EntropyDensityCollapse",
+  "invariants": [
+    "Entropy and control parameter are both made intensive before fitting",
+    "The same ansatz and optimiser are applied to empirical and null data",
+    "Exponent uncertainties come from resampling, not from a single fit"
+  ],
+  "mechanism": "Samples differ in how many agents or interactions fill the same observation area, so raw entropies mix size with structure. Make both quantities intensive: entropy density eta = H / A_o and control parameter rho = N_V / A_o (agent density for an agent network, interaction-event density for an event network). Take the characteristic system size S = <rho> per sample and fit the finite-size scaling ansatz eta(rho, S) = S^alpha f(rho S^-beta): choose alpha and beta (e.g. by Nelder-Mead) to minimise sum_ij (eta_ij S^-alpha - f(rho_ij S^-beta))^2 over samples i and windows j, and bootstrap windows to get exponent uncertainties. A good collapse means a shared scaling law; systematic, regime-labelled departures from the collapsed curve are the signal. Compare the collapse with the same procedure on {{null_model}} data, and test departures with {{clustered_testing}}. Interpret exponents too: near-zero exponents with a near-perfect fit mean the measure is simply tracking density.",
+  "postconditions": [
+    "Each observation has rescaled coordinates (rho S^-beta, eta S^-alpha) in which regimes can be compared at matched density"
+  ],
+  "preconditions": [
+    "Observations span a range of densities wide enough to constrain alpha and beta"
+  ],
+  "sema_category": "Dynamics",
+  "sema_id": "sema:EntropyDensityCollapse#mh:SHA-256:0874645031ec2852f52b3a5a1c3980055703036ef7278df3aee69c6359559bb3",
+  "sema_layer": "Physics",
+  "sema_ref": "EntropyDensityCollapse#0874",
+  "sema_stub": "0874"
+}

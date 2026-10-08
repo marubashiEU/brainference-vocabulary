@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "path": [
+      "Infrastructure",
+      "Primitives"
+    ],
+    "ring": 1,
+    "tier": 2
+  },
+  "failure_modes": [
+    "Interfaces that hide side-effects in unspecified state",
+    "Requirement of invertibility that excludes useful one-way operations"
+  ],
+  "gloss": "Parts join through interfaces whose effects and side-effects are fully undoable",
+  "handle": "ReversibleComposability",
+  "invariants": [
+    "Every addition has a defined inverse",
+    "No effect is left in latent state outside the interface"
+  ],
+  "mechanism": "A component added to a system declares an interface with rules that specify both its direct effects and its co-effects on neighbors. Because every effect is defined through the interface, removal can restore the prior state exactly, and the system has no hidden intermediate state. Category-theoretic composition, where each morphism has a defined inverse or identity, formalizes this.",
+  "sema_category": "Primitives",
+  "sema_id": "sema:ReversibleComposability#mh:SHA-256:4aa253d2f27878bc64751effe6d21a63aede7e716de423b687ee5ab325905c88",
+  "sema_layer": "Infrastructure",
+  "sema_ref": "ReversibleComposability#4aa2",
+  "sema_stub": "4aa2"
+}

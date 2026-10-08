@@ -1,0 +1,34 @@
+{
+  "_meta": {
+    "path": [
+      "Physics",
+      "Dynamics"
+    ],
+    "ring": 1,
+    "source": "thesis/do_2026_ant_collective_behavior (Ch. 1.1.1; Ch. 1.1.2 'coevolution'; Ch. 5.7.3)",
+    "tier": 1
+  },
+  "dependencies": {
+    "references": {
+      "self_organisation": "sema:SelfOrganisation#mh:SHA-256:efc9067bfdfea22ceeed9dba82eb6e4c949a232ddf96fd8c20d07e4f51e03886"
+    }
+  },
+  "failure_modes": [
+    "Freezing the network to study state dynamics, or freezing states to study topology, and missing the feedback",
+    "Edge semantics chosen for convenience rather than biological or functional relevance",
+    "Observing topology only, without node states, so the coupling cannot be estimated"
+  ],
+  "gloss": "Agent states and the network linking them reshape each other on comparable timescales",
+  "handle": "AdaptiveNetworkCoevolution",
+  "invariants": [
+    "Node states and topology are both dynamic variables",
+    "Each constrains the other's next update",
+    "The two timescales are comparable; if one is much slower, the system reduces to dynamics on a fixed network or a fixed-state network rewiring"
+  ],
+  "mechanism": "In an adaptive network, nodes carry internal states (an ant 'engaged in foraging' or 'engaged in defence') and those states decide which links form now; the resulting topology then constrains which state transitions happen next. Because both change on comparable timescales, neither can be treated as a fixed background for the other, and the feedback between micro-level state and macro-level structure drives the system between collective regimes, as in {{self_organisation}}. An ant that modulates its movement by its recent encounter rate changes the network that sets its next encounter rate. Defining what counts as an edge (presence, frequency, duration) is part of the model and changes what the coupling appears to do.",
+  "sema_category": "Dynamics",
+  "sema_id": "sema:AdaptiveNetworkCoevolution#mh:SHA-256:e5886df4ff8a4bf9d1a5c5941c0f7a2d0f20263aae354cf34be2fedac2572ba2",
+  "sema_layer": "Physics",
+  "sema_ref": "AdaptiveNetworkCoevolution#e588",
+  "sema_stub": "e588"
+}

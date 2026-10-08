@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "path": [
+      "Society",
+      "Coordination"
+    ],
+    "ring": 1,
+    "tier": 2
+  },
+  "failure_modes": [
+    "Anonymous one-shot interactions",
+    "Endgame effects near a known termination"
+  ],
+  "gloss": "Cooperation holds when interaction is repeated without a known end",
+  "handle": "CooperationHorizon",
+  "invariants": [
+    "Cooperation depends on expected future interaction",
+    "Known endpoints invite defection"
+  ],
+  "mechanism": "In repeated games, tit-for-tat cooperation breaks down when the number of rounds is fixed and known, since defection in the last round unravels earlier ones. It survives when the end is unknown. Small communities in which people will meet for decades stay cooperative for the same reason, unlike strangers at a train station.",
+  "sema_category": "Coordination",
+  "sema_id": "sema:CooperationHorizon#mh:SHA-256:8806b1a1cda732647179088e9a9abcab9572a11772ac8e977f4cd197e1187163",
+  "sema_layer": "Society",
+  "sema_ref": "CooperationHorizon#8806",
+  "sema_stub": "8806"
+}

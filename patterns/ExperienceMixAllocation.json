@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "path": [
+      "Society",
+      "Coordination"
+    ],
+    "ring": 1,
+    "tier": 2
+  },
+  "failure_modes": [
+    "Cheap swarm looping over already-discovered facts",
+    "Expert capacity spent on volume work"
+  ],
+  "gloss": "Mix a few deep experts with cheap or diverse workers, matched to how new the problem is",
+  "handle": "ExperienceMixAllocation",
+  "invariants": [
+    "Allocation depends on problem novelty",
+    "Expensive capacity handles judgment; cheap capacity handles volume"
+  ],
+  "mechanism": "For a known domain a small number of very experienced agents outperform a large crowd of novices, because they know where to look. For a new paradigm nobody has the answer, so volume and variety win. The allocation of expensive expert capacity versus cheap parallel workers is chosen from how well-mapped the problem is.",
+  "sema_category": "Coordination",
+  "sema_id": "sema:ExperienceMixAllocation#mh:SHA-256:0fc05fb2a58aa44589c93e97cfef1779423ca92ec1390be19254d4b70e942db2",
+  "sema_layer": "Society",
+  "sema_ref": "ExperienceMixAllocation#0fc0",
+  "sema_stub": "0fc0"
+}

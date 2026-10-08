@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Memory"
+    ],
+    "ring": 1,
+    "tier": 2
+  },
+  "failure_modes": [
+    "Discarding rare but valuable knowledge",
+    "Retaining harmful memories because nothing prunes them"
+  ],
+  "gloss": "Retention needs a filter that discards what is no longer useful",
+  "handle": "StrategicForgetting",
+  "invariants": [
+    "Forgetting is selective, not uniform decay",
+    "Filtering happens at more than one timescale"
+  ],
+  "mechanism": "A learning system that keeps everything accumulates noise. A periodic process, such as sleep, reviews recent experience, keeps what is useful, and discards or digests the rest. Community and generational transfer act as further filters, since only widely reused knowledge survives to the next holder.",
+  "sema_category": "Memory",
+  "sema_id": "sema:StrategicForgetting#mh:SHA-256:c3342dc2761d5e2ff5e88d80af91ae902cc1c6c3af984c6261570025114fd822",
+  "sema_layer": "Mind",
+  "sema_ref": "StrategicForgetting#c334",
+  "sema_stub": "c334"
+}

@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Memory"
+    ],
+    "ring": 2,
+    "tier": 3
+  },
+  "failure_modes": [
+    "Stale narratives left in history contradict the current state",
+    "Narrative overstates the state and forces caricatured behavior"
+  ],
+  "gloss": "Give a model its internal state as a short story and rewrite it every turn",
+  "handle": "NarrativeStateInjection",
+  "invariants": [
+    "Exactly one current state narrative is present in context",
+    "Old narratives are removed, not appended"
+  ],
+  "mechanism": "Numeric state such as anger 8 out of 10 carries no meaning to a language model. Instead the state is expressed as a short prose account of what the agent feels and how its responses change. The prior account is deleted from the history and replaced each turn, so context holds only the current one.",
+  "sema_category": "Memory",
+  "sema_id": "sema:NarrativeStateInjection#mh:SHA-256:788991b0f28ec54c847a05f7a393c25fed91259a722f247fde75a26147cff757",
+  "sema_layer": "Mind",
+  "sema_ref": "NarrativeStateInjection#7889",
+  "sema_stub": "7889"
+}

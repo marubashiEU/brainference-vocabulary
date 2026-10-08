@@ -1,0 +1,32 @@
+{
+  "_meta": {
+    "path": [
+      "Society",
+      "Coordination"
+    ],
+    "ring": 1,
+    "tier": 2
+  },
+  "dependencies": {
+    "composes_with": {
+      "mix": "sema:ExperienceMixAllocation#mh:SHA-256:0fc05fb2a58aa44589c93e97cfef1779423ca92ec1390be19254d4b70e942db2",
+      "topology": "sema:CoordinatorLaneTopology#mh:SHA-256:7e8603daa3abea68c1b860ffbf8839fa5b2f3354f09a14bf9e12bd0554cfd8a0"
+    }
+  },
+  "failure_modes": [
+    "Swarm loops rediscovering earlier results",
+    "Saving money on the decision-making step"
+  ],
+  "gloss": "Prefer strong agents in a simple topology; use cheap agents only where errors are cheap",
+  "handle": "SwarmCostQualityTradeoff",
+  "invariants": [
+    "Errors that redirect the whole swarm are priced in",
+    "Cheap agents work below a capable coordinator"
+  ],
+  "mechanism": "Two schools exist: many cheap agents with large compute, or the best available agents. A few percent more capability removes a mistake that would send a whole swarm the wrong way. Applying {{mix}} keeps cheap sub-agents for volume work under the {{topology}} of a coordinator and lanes. Cost comparisons should use what an employee costs a business, not a hobbyist's budget.",
+  "sema_category": "Coordination",
+  "sema_id": "sema:SwarmCostQualityTradeoff#mh:SHA-256:ae7377bd868e7053d57d477f0db591b5fe1e1f73f6bbb51ee8abeac3a15f8191",
+  "sema_layer": "Society",
+  "sema_ref": "SwarmCostQualityTradeoff#ae73",
+  "sema_stub": "ae73"
+}

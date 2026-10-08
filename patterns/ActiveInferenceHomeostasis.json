@@ -1,0 +1,31 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Inference"
+    ],
+    "ring": 2,
+    "tier": 3
+  },
+  "dependencies": {
+    "references": {
+      "pem": "sema:PredictionErrorMinimization#mh:SHA-256:5a5c8ef472f994f11d8aba5b5c9b40b6c96fea601efab2838cc73ba734244fcc"
+    }
+  },
+  "failure_modes": [
+    "Anxiety from perpetual prediction of future departures",
+    "Priors that no longer match the environment"
+  ],
+  "gloss": "Baked-in survival ranges become priors, and gaps between prior and state drive action",
+  "handle": "ActiveInferenceHomeostasis",
+  "invariants": [
+    "Priors encode viability ranges",
+    "Gap between state and prior is the driver of action"
+  ],
+  "mechanism": "The ranges an organism must stay in to live act as priors inside {{pem}}. Whenever the current or predicted state departs from those ranges, the mismatch becomes an incentive to act or to learn something new. Motivation is thereby a consequence of uncertainty reduction relative to fixed homeostatic targets.",
+  "sema_category": "Inference",
+  "sema_id": "sema:ActiveInferenceHomeostasis#mh:SHA-256:1892818bc59b5f7894c52357d222178d91c4dfbd70857b2d2240bbcff25ae632",
+  "sema_layer": "Mind",
+  "sema_ref": "ActiveInferenceHomeostasis#1892",
+  "sema_stub": "1892"
+}

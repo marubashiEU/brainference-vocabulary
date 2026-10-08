@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Strategy"
+    ],
+    "ring": 1,
+    "tier": 2
+  },
+  "failure_modes": [
+    "Loving the goal instead of what it was for",
+    "Reaching the goal and having nothing left"
+  ],
+  "gloss": "A wrong goal defeats correct execution; choosing the goal is the highest-leverage decision",
+  "handle": "GoalMisspecification",
+  "invariants": [
+    "Goal choice precedes execution",
+    "Underestimated effort and unexamined desire are the common causes of failure"
+  ],
+  "mechanism": "Effort applied faithfully to the wrong goal ends in the wrong place, so the goal must be examined before any action. Goals often reflect inherited desires, insecurity, or a story about what one deserves rather than what one wants. A goal aligned with what is actually wanted takes less effort to maintain.",
+  "sema_category": "Strategy",
+  "sema_id": "sema:GoalMisspecification#mh:SHA-256:ad3fc0c962124b77bf8c79fde1073560cb4f35a0ce257bf829ef938c538a0a3a",
+  "sema_layer": "Mind",
+  "sema_ref": "GoalMisspecification#ad3f",
+  "sema_stub": "ad3f"
+}

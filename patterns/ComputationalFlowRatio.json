@@ -1,0 +1,32 @@
+{
+  "_meta": {
+    "path": [
+      "Infrastructure",
+      "Primitives"
+    ],
+    "ring": 2,
+    "source": "book/on_the_origin_of_risk (Timlett 2025), ch. 16 (Equation 4, typewriter example, Fig. 21)",
+    "tier": 1
+  },
+  "dependencies": {
+    "references": {
+      "computational_entropy_rate": "sema:ComputationalEntropyRate#mh:SHA-256:ae56eadfb0597b90bbe3a15cefe085d58d5878d1f7d0ee94c7a1525c7ae241d9"
+    }
+  },
+  "failure_modes": [
+    "Judging a process only by its rejection rate and ignoring how long rejected attempts run",
+    "Assuming the only way to improve a channel is to submit fewer invalid inputs"
+  ],
+  "gloss": "Bit flow rate over input flow rate: how cheaply a channel rejects, at a given entropy rate",
+  "handle": "ComputationalFlowRatio",
+  "invariants": [
+    "The ratio equals mean accepted input length over mean submitted input length",
+    "Channels with equal entropy rates can differ in flow ratio"
+  ],
+  "mechanism": "The flow ratio is the bit flow rate divided by the input flow rate, both defined under {{computational_entropy_rate}}. It equals the mean length of accepted inputs divided by the mean length of all submitted inputs. Channels with the same entropy rate can have very different ratios. Writing 20 pages of 10,000 words, all with 66% of words kept, a writer who keeps 25% of pages has a ratio of 2.64 and abandons a bad page after about 227 words, while one who keeps 75% has 0.88 and abandons after 680. A ratio above 1 means rejection happens early and cheaply, so more options can be weighed at the same overall cost. A uniform, single-step generation process gives a ratio near 1; mixing phases or targets, such as appending whole valid words instead of letters, creates the asymmetry.",
+  "sema_category": "Primitives",
+  "sema_id": "sema:ComputationalFlowRatio#mh:SHA-256:fb62678b000ed915f9d5ef9b600a3f00d2d05bc60750fe2ec0534d61021fd3cc",
+  "sema_layer": "Infrastructure",
+  "sema_ref": "ComputationalFlowRatio#fb62",
+  "sema_stub": "fb62"
+}

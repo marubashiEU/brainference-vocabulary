@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Inference"
+    ],
+    "ring": 2,
+    "tier": 3
+  },
+  "failure_modes": [
+    "Mistaking recognizable pattern for absence of intelligence",
+    "Assuming personalization by prompt equals a distinct instance"
+  ],
+  "gloss": "Shared model copies share one voice, which reads as no personality",
+  "handle": "ModelStyleConvergence",
+  "invariants": [
+    "Identical weights produce a common style",
+    "Individuality requires divergent accumulated experience"
+  ],
+  "mechanism": "Everyone using the same model receives the same distribution of style, so its writing becomes recognizable as the model's rather than as an individual's. Individual identity would need each user to hold a distinct trained instance shaped by its own accumulated experience, as a person's character reflects millions of individual impressions.",
+  "sema_category": "Inference",
+  "sema_id": "sema:ModelStyleConvergence#mh:SHA-256:4282b01d1974138765a9de3306b2bf706d06edea88f1282d19853f7d78fb097b",
+  "sema_layer": "Mind",
+  "sema_ref": "ModelStyleConvergence#4282",
+  "sema_stub": "4282"
+}

@@ -1,0 +1,35 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Reasoning"
+    ],
+    "ring": 1,
+    "source": "thesis/do_2026_ant_collective_behavior (Ch. 5.3 'order or disorder ... is representation dependent'; Ch. 5.5; Ch. 5.8)",
+    "tier": 1
+  },
+  "dependencies": {
+    "references": {
+      "meta_modularity": "sema:MetaModularity#mh:SHA-256:b97e135e49a64811d5b909f338e4f9034642d7fb07386d724548dd2b83302597",
+      "sequence_signature": "sema:InteractionSequenceEntropySignature#mh:SHA-256:8e4b712961babae9592a8b770702ab22cb5aba550eaacceebb80484b087dde36",
+      "spatial_divergence": "sema:LocalSpatialStateDivergence#mh:SHA-256:2b5e93e20a335e9aff9fa14d6d8fc75b3872c759c2e7d331da7af4449062bae3"
+    }
+  },
+  "failure_modes": [
+    "Declaring a regime 'random' because it is random in the one representation measured",
+    "Forcing representations to agree by choosing parameters until they do",
+    "Adding representations without asking whether their extra cost answers a question the others cannot"
+  ],
+  "gloss": "Whether a collective looks ordered depends on the representation, so read several and expect them to disagree",
+  "handle": "RepresentationDependentOrder",
+  "invariants": [
+    "Any statement that a regime is ordered names the representation and measure",
+    "Different representations of the same data may rank regimes differently, and both rankings can be correct"
+  ],
+  "mechanism": "'Order' and 'disorder' are not properties of a system alone but of a system seen through a representation. The same fire ant regimes rank differently by spatial and by temporal measures. By {{spatial_divergence}}, roaming is closest to random and aggression most structured (roaming < trailing < aggression in spatial order). By {{sequence_signature}}, roaming has the most predictable interaction chains and trailing the most branching ones. So roaming is spatially disordered but temporally ordered, and trailing is spatially ordered but temporally complex. Spatial and temporal organisation are complementary axes, and no single representation is sufficient. Keep several overlapping, non-identical representations of the same collective, as {{meta_modularity}} recommends for models, and treat a disagreement between them as information about which kind of organisation a regime uses.",
+  "sema_category": "Reasoning",
+  "sema_id": "sema:RepresentationDependentOrder#mh:SHA-256:212ca6d02215c8ab853b6728f8fe8d3e72ab4f28d025437d28be2f817945e45a",
+  "sema_layer": "Mind",
+  "sema_ref": "RepresentationDependentOrder#212c",
+  "sema_stub": "212c"
+}

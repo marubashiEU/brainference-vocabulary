@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Memory"
+    ],
+    "ring": 1,
+    "tier": 2
+  },
+  "failure_modes": [
+    "Telling the model not to repeat earlier examples that are still visible produces near-duplicates",
+    "Long conversations accumulate content that silently biases later turns"
+  ],
+  "gloss": "Anything placed in context stays active, even when told to avoid it",
+  "handle": "PinkElephantContext",
+  "invariants": [
+    "Content in context influences output regardless of the instruction attached to it",
+    "Removing content is the reliable way to stop its influence"
+  ],
+  "mechanism": "A language model conditions on everything in its context window. Naming a thing to avoid, or showing previous outputs to not repeat, keeps that content present and pulls generation toward it. Steering therefore works by controlling what enters the context, not by adding negative instructions.",
+  "sema_category": "Memory",
+  "sema_id": "sema:PinkElephantContext#mh:SHA-256:5131b6e6652a91b151c3605d0bce9dbc3d763c3c2cc4b803435dc83ec9ff45e4",
+  "sema_layer": "Mind",
+  "sema_ref": "PinkElephantContext#5131",
+  "sema_stub": "5131"
+}

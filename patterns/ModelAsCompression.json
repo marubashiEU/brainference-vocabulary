@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Inference"
+    ],
+    "ring": 0,
+    "source": "main page ('our insights'); research/complexity_epistemology; research/what_is_complexity; research/harness_bodies_death",
+    "tier": 1
+  },
+  "dependencies": {
+    "composes_with": {
+      "equation_reduction": "sema:EquationReduction#mh:SHA-256:c553290bf7a727da9177f5fea9ede2cf4827bd253e57e237cf7d44d8a83e833f"
+    },
+    "references": {
+      "computational_irreducibility": "sema:ComputationalIrreducibility#mh:SHA-256:77eaaa0cb7d5fdf22915b2147d1a9b4061acdd4f45c5297dd8c60ac5bf2fa7f7"
+    }
+  },
+  "failure_modes": [
+    "Judging a model on accuracy alone and ignoring what it costs to run",
+    "Assuming a compressed description exists for a process under {{computational_irreducibility}}",
+    "Lost-in-reduction: the discarded information was the information that mattered"
+  ],
+  "gloss": "A model represents a process in fewer computational steps than the process itself",
+  "handle": "ModelAsCompression",
+  "invariants": [
+    "A model that takes as many steps as the process is maximally inefficient, however accurate",
+    "Effectiveness and efficiency are evaluated separately",
+    "Compression discards information, and the discarded part cannot be chosen with certainty in advance"
+  ],
+  "mechanism": "A model is anything that represents a process in fewer computational steps than the process takes. It is judged on two metrics: effectiveness, how accurately it reaches its goal, and efficiency, how many steps it saves relative to the process. Where {{computational_irreducibility}} holds, an accurate model saves no steps. Understanding is tracing a shorter path from A to B in information space, and intelligence is this compression. The reductive tradition of {{equation_reduction}} is compression by design.",
+  "sema_category": "Inference",
+  "sema_id": "sema:ModelAsCompression#mh:SHA-256:265d6bf16579e276ca74ec7f344c57e683d83d7df896794529a96d088ed2e54f",
+  "sema_layer": "Mind",
+  "sema_ref": "ModelAsCompression#265d",
+  "sema_stub": "265d"
+}

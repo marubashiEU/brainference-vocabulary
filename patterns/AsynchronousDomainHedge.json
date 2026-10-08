@@ -1,0 +1,35 @@
+{
+  "_meta": {
+    "path": [
+      "Physics",
+      "Dynamics"
+    ],
+    "ring": 2,
+    "source": "book/on_the_origin_of_risk (Timlett 2025), ch. 18 (asynchronous hedging, Fig. 24), Technical appendix I (splicing as fractional hedge)",
+    "tier": 3
+  },
+  "dependencies": {
+    "references": {
+      "niche_hedge_crossing": "sema:NicheHedgeCrossing#mh:SHA-256:65e3edbd1a8eb73c71cb3871c0cd8c01a2b9e6ce1aa6a9d5c9a9e78a16878966"
+    }
+  },
+  "failure_modes": [
+    "Treating the targets as independent, which makes joint improvement look improbable",
+    "Testing for the effect in a single-niche laboratory medium that removes the second target"
+  ],
+  "gloss": "Concurrent niche hedging on shared code sites predicts overlapping coding sequences",
+  "handle": "AsynchronousDomainHedge",
+  "invariants": [
+    "Each fixed mutation benefits the niche occupied at that step",
+    "The targets are inversely correlated at the code level, not independent"
+  ],
+  "mechanism": "Extend {{niche_hedge_crossing}} by dropping two simplifying assumptions: that mutations only append to the end of a sequence, and that each target's code improves in its own region of code space. Mutations now land on sites used by either target. Each fixed mutation is still beneficial for the niche currently occupied, while information serving the other target may be lost. The two targets are inversely correlated hedges, not independent, so gains in one raise the chance of gains in the other instead of lowering it. Overlaying the two concurrent trajectories in code space gives a double helix, or an n-ary helix for n niches. The hypothesis predicts that genes contributing to several proteins, through alternative splicing or disordered proteins, are fractional hedges between those functions.",
+  "preconditions": [
+    "The population can occupy at least two niches whose fitness landscapes are related as hedges"
+  ],
+  "sema_category": "Dynamics",
+  "sema_id": "sema:AsynchronousDomainHedge#mh:SHA-256:ebb250ac12aada57e727b9312988e71ac8db727fc6eaccb06b61de9b08ac61ee",
+  "sema_layer": "Physics",
+  "sema_ref": "AsynchronousDomainHedge#ebb2",
+  "sema_stub": "ebb2"
+}

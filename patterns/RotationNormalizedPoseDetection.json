@@ -1,0 +1,32 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Inference"
+    ],
+    "ring": 2,
+    "source": "thesis/do_2026_ant_collective_behavior (Ch. 2.2.2-2.2.3, Eqs. 2.1-2.5, Table 2.2)",
+    "tier": 1
+  },
+  "failure_modes": [
+    "A wrong Stage 1 heading (head and tail swapped) propagates a 180 degree error that Stage 2 cannot see",
+    "Dense overlap: tight crops of touching animals contain parts of neighbours",
+    "A strict overlap threshold trades recall for tightness; choose it for what the downstream analysis needs"
+  ],
+  "gloss": "Detect in the full frame, then crop and rotate each instance to a canonical heading before estimating its pose",
+  "handle": "RotationNormalizedPoseDetection",
+  "invariants": [
+    "Stage 2 only ever sees instances in one canonical orientation",
+    "Predicted keypoints are mapped back to full-frame coordinates by the exact inverse transform",
+    "False negatives and false positives are penalised symmetrically, because both corrupt downstream interaction networks"
+  ],
+  "mechanism": "Plain convolutional networks are not rotation-equivariant, so one model asked to estimate keypoints for animals facing every direction confuses left and right body parts (mirror errors across the head-tail axis). Split the work. Stage 1: a full-frame keypoint detector (Keypoint R-CNN, ResNet-18 + FPN, COCO-pretrained, head replaced for a 20-keypoint ant skeleton, augmented with +/-15 degree rotation, flips and blur) finds boxes and a rough head-tail axis; drop boxes below 0.7 confidence. Stage 2: crop each box enlarged by 75% for context, rotate it so the head points up, and run an identically built model trained only on canonically oriented crops; then map keypoints back with the inverse rotation and translation. Score each stage with a single balanced error M = sqrt(FN^2 + FP^2) / (FN + FP + TP), using strict box overlap (0.7) for detection and OKS >= 0.4 with Hungarian matching for keypoints, and tune hyperparameters on it (Bayesian search with asynchronous successive halving). In the ant pipeline this cut box error from 0.187 to 0.104 and keypoint error from 0.315 to 0.203.",
+  "preconditions": [
+    "Stage 1 recovers the orientation axis well enough to choose the canonical rotation"
+  ],
+  "sema_category": "Inference",
+  "sema_id": "sema:RotationNormalizedPoseDetection#mh:SHA-256:1a44e48cd21fd0bd1072e854af155ffbb77ca0b146c8ff4d39c5c8c9038c99ef",
+  "sema_layer": "Mind",
+  "sema_ref": "RotationNormalizedPoseDetection#1a44",
+  "sema_stub": "1a44"
+}

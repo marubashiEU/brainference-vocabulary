@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "path": [
+      "Physics",
+      "Dynamics"
+    ],
+    "ring": 2,
+    "tier": 3
+  },
+  "failure_modes": [
+    "Oversimplified world that produces artifacts of the model",
+    "Funding pressure to name the outcome before the search"
+  ],
+  "gloss": "Vary the rules of simple agents in simulation to see which yield interesting collective behavior",
+  "handle": "EmergentRuleSearch",
+  "invariants": [
+    "Rules apply to individual agents, not to the outcome",
+    "The outcome is observed after running, not assumed"
+  ],
+  "mechanism": "Start from a vague intuition about a phenomenon, define simple individual agents with tunable rules, and run the simulation while varying parameters. Observe under which conditions the phenomenon (such as a dominance hierarchy) emerges. The result is discovered, not specified, and deep learning is a large instance of the same search over unit rules.",
+  "sema_category": "Dynamics",
+  "sema_id": "sema:EmergentRuleSearch#mh:SHA-256:9c193dcf9edc7b6c9eadab7da9f27ab778970100b5efc1dacfb5c334bfcf8792",
+  "sema_layer": "Physics",
+  "sema_ref": "EmergentRuleSearch#9c19",
+  "sema_stub": "9c19"
+}

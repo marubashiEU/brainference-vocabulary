@@ -1,0 +1,67 @@
+{
+  "_meta": {
+    "path": [
+      "Infrastructure",
+      "Data Structures"
+    ],
+    "ring": 2,
+    "source": "book/on_the_origin_of_risk (Timlett 2025), ch. 2 (geologic map meta-model), Technical appendix I (fractional meta-models, Fig. 25-26)",
+    "tier": 2
+  },
+  "data_schema": {
+    "description": "A set of functions, each partly implemented across the components of one solution",
+    "properties": {
+      "functions": {
+        "items": {
+          "properties": {
+            "components_complete": {
+              "description": "k, at most n",
+              "minimum": 0,
+              "type": "integer"
+            },
+            "components_required": {
+              "description": "n",
+              "minimum": 1,
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "components_required",
+            "components_complete"
+          ],
+          "type": "object"
+        },
+        "type": "array"
+      }
+    },
+    "required": [
+      "functions"
+    ],
+    "type": "object"
+  },
+  "dependencies": {
+    "references": {
+      "computational_channel": "sema:ComputationalChannel#mh:SHA-256:4dbe50ab8b0edb70fa56a2db1c32fd83298f6813dc8972290cadd678e6c69336"
+    }
+  },
+  "failure_modes": [
+    "Calling a data hierarchy a meta-model and expecting it to hold domain information",
+    "Leaving fractions unmeasured, so neither their cost nor their readiness is known"
+  ],
+  "gloss": "A model at the level of the solution that partly implements several models at once",
+  "handle": "FractionalMetaModel",
+  "invariants": [
+    "The domain can be read by inspecting a fractional meta-model",
+    "Full and absent implementation are the limiting cases k = n and k = 0"
+  ],
+  "mechanism": "Three kinds of meta-model differ in where they sit. A hierarchical meta-model goes one level up and keeps only data types and relations, so its domain cannot be read from it; a geologic map meta-model, or a neural network described as a meta-model, is of this kind. A domain-specific language goes one level down and restricts a general language to one domain. A fractional meta-model sits at the level of the solution itself and implements one model fully while implementing parts of others: k of the n components a function needs are in place. The simplest case is a {{computational_channel}}, where generated but rejected inputs are fractionally implemented functions that a change to the acceptor would complete. Full implementation is the special case k equals n.",
+  "sema_category": "Data Structures",
+  "sema_id": "sema:FractionalMetaModel#mh:SHA-256:3eca15b2980bb7a1d6b64d65d940a7ef05df23858c862623417c3dceb72471e7",
+  "sema_layer": "Infrastructure",
+  "sema_ref": "FractionalMetaModel#3eca",
+  "sema_stub": "3eca"
+}

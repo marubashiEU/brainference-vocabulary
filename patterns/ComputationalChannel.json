@@ -1,0 +1,29 @@
+{
+  "_meta": {
+    "path": [
+      "Infrastructure",
+      "Primitives"
+    ],
+    "ring": 2,
+    "source": "book/on_the_origin_of_risk (Timlett 2025), ch. 16-17 (computational channels, password generator and acceptor)",
+    "tier": 2
+  },
+  "failure_modes": [
+    "Treating meaningful rejection as noise and engineering it away",
+    "Treating the acceptor as the only reference language and ignoring what the generator encodes",
+    "Assuming all rejected inputs are equally far from validity"
+  ],
+  "gloss": "A channel formed by a generator language and an acceptor language, where rejection is computation, not noise",
+  "handle": "ComputationalChannel",
+  "invariants": [
+    "Rejection is decided by the acceptor language, not by random corruption",
+    "If the generator language is a subset of the acceptor language, nothing is rejected and no options are stored",
+    "Either language can be treated as the reference for a valid input"
+  ],
+  "mechanism": "Model a channel as two formal languages: a generator language G, the inputs a source tends to produce, and an acceptor language A, the inputs a receiver or validator accepts. Inputs in the intersection of G and A pass; inputs in G but not A are rejected. Unlike a Shannon channel, where lost information is noise, rejection here is meaningful and part of the channel's design, as when a password validator rejects memorable but weak passwords, or an environment rejects unviable genomes. The rejected set G minus A holds proximate options: already generated, carrying the generator's information, and made valid by a small change to A or G. If G is a subset of A, the channel has no friction and stores no options.",
+  "sema_category": "Primitives",
+  "sema_id": "sema:ComputationalChannel#mh:SHA-256:4dbe50ab8b0edb70fa56a2db1c32fd83298f6813dc8972290cadd678e6c69336",
+  "sema_layer": "Infrastructure",
+  "sema_ref": "ComputationalChannel#4dbe",
+  "sema_stub": "4dbe"
+}

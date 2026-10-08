@@ -1,0 +1,36 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Strategy"
+    ],
+    "ring": 1,
+    "source": "research/founder_strategies_from_biology (life cycle as tactics); research/harness_bodies_death (the use of death)",
+    "tier": 2
+  },
+  "dependencies": {
+    "composes_with": {
+      "meta_modularity": "sema:MetaModularity#mh:SHA-256:b97e135e49a64811d5b909f338e4f9034642d7fb07386d724548dd2b83302597"
+    },
+    "references": {
+      "generational_knowledge_transfer": "sema:GenerationalKnowledgeTransfer#mh:SHA-256:5c5cb066c68f0ae82d4f05869c97e6a539a1b62c3a367204ea77702f7055a7d6",
+      "self_organisation": "sema:SelfOrganisation#mh:SHA-256:efc9067bfdfea22ceeed9dba82eb6e4c949a232ddf96fd8c20d07e4f51e03886"
+    }
+  },
+  "failure_modes": [
+    "Reading a change of form as retreat and abandoning the strategy",
+    "Holding the reserve form too long and missing the moment it was needed"
+  ],
+  "gloss": "A life cycle is a set of tactics played under stress, not a fixed sequence of stages",
+  "handle": "FormChangeRepertoire",
+  "invariants": [
+    "Forms are selected by conditions, not by a predetermined order",
+    "What was learned in one form carries into the next"
+  ],
+  "mechanism": "An organism or agent holds several forms and switches between them according to environmental stress, all serving one overall strategy. The slime mould lives as single cells, aggregates into a collective body through {{self_organisation}} when food runs out, and releases spores as an option held in reserve. Failure in one form is a reason to change form, not to leave the game. The repertoire is {{meta_modularity}} applied to the body or organisation itself. Ending one instance and passing on what matters, as in {{generational_knowledge_transfer}}, is the same tactic at the scale of a lineage.",
+  "sema_category": "Strategy",
+  "sema_id": "sema:FormChangeRepertoire#mh:SHA-256:7c1decd0045dfd2ad044fc1d07587392d7b2a33e87593fd6e8b0b060f527ef94",
+  "sema_layer": "Mind",
+  "sema_ref": "FormChangeRepertoire#7c1d",
+  "sema_stub": "7c1d"
+}

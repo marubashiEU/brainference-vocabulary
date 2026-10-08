@@ -1,0 +1,33 @@
+{
+  "_meta": {
+    "path": [
+      "Physics",
+      "Dynamics"
+    ],
+    "ring": 2,
+    "source": "research/on_the_origin_of_risk (crossing valleys)",
+    "tier": 3
+  },
+  "dependencies": {
+    "references": {
+      "red_queen_race": "sema:RedQueenRace#mh:SHA-256:4c871b1148541320528ef16af91edb90e5a16a5d4f27ea4e136e897d1a30922e"
+    }
+  },
+  "failure_modes": [
+    "The simpler niche disappears before validity is restored in the complex one",
+    "The niches' fitness landscapes are independent rather than inversely correlated, so no hedge exists"
+  ],
+  "gloss": "Cross a fitness valley by paying each step in a simpler niche where the broken intermediate helps",
+  "handle": "NicheHedgeCrossing",
+  "invariants": [
+    "Each intermediate step is beneficial in at least one niche the population can occupy",
+    "The two niches are related as a hedge: what breaks one benefits the other",
+    "A population distributing across niches each generation is sufficient agency"
+  ],
+  "mechanism": "A function that is valid in a complex niche is extended and becomes invalid there. Each intermediate is advantageous in a simpler niche, for example as a disabled pathway that sheds metabolic load. A further extension restores validity in the complex niche with a more complex function. Every step pays in whichever niche the population occupies at the time, because the two niches' fitness landscapes are inversely correlated. This is how the pressure of a {{red_queen_race}} can be escaped without neutral drift.",
+  "sema_category": "Dynamics",
+  "sema_id": "sema:NicheHedgeCrossing#mh:SHA-256:65e3edbd1a8eb73c71cb3871c0cd8c01a2b9e6ce1aa6a9d5c9a9e78a16878966",
+  "sema_layer": "Physics",
+  "sema_ref": "NicheHedgeCrossing#65e3",
+  "sema_stub": "65e3"
+}

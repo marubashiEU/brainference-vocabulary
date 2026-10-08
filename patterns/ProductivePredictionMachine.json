@@ -1,0 +1,27 @@
+{
+  "_meta": {
+    "path": [
+      "Infrastructure",
+      "Primitives"
+    ],
+    "ring": 2,
+    "source": "book/on_the_origin_of_risk (Timlett 2025), Technical appendix III (automata that exploit predictions, skipping inputs)",
+    "tier": 1
+  },
+  "failure_modes": [
+    "The prediction fails and the derived machine has no path for the actual input",
+    "Never sampling the skipped input, so a broken prediction goes unnoticed"
+  ],
+  "gloss": "Simplify an automaton by deleting the paths a reliable prediction says inputs will never take",
+  "handle": "ProductivePredictionMachine",
+  "invariants": [
+    "The derived machine agrees with the original on every input satisfying the prediction",
+    "Exploitability is a property of the prediction and the machine together"
+  ],
+  "mechanism": "Take a finite automaton or Turing machine M and a prediction about its inputs, stated negatively: after an A, no letter other than B follows. Delete every transition on an excluded letter from states entered by reading A, and every state reachable only through them. Further, after reading A, move directly to the state reached by AB and skip the B. The resulting machine behaves identically to M on every input that satisfies the prediction. How much M shrinks measures how exploitable the prediction is, which depends on the machine's shape as much as on the prediction. The freed capacity can be returned as savings or reused for other processing within the same budget.",
+  "sema_category": "Primitives",
+  "sema_id": "sema:ProductivePredictionMachine#mh:SHA-256:77831579d725d3639cfcf8445d5efacc0c3346d6dc97c4a238cec7ba09c1e1c7",
+  "sema_layer": "Infrastructure",
+  "sema_ref": "ProductivePredictionMachine#7783",
+  "sema_stub": "7783"
+}

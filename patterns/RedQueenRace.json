@@ -1,0 +1,27 @@
+{
+  "_meta": {
+    "path": [
+      "Physics",
+      "Dynamics"
+    ],
+    "ring": 1,
+    "source": "research/what_is_complexity (Adam); research/founder_strategies_from_biology",
+    "tier": 1
+  },
+  "failure_modes": [
+    "Reading constant change as progress when it only holds position",
+    "Assuming a dominant strategy exists and can be found once"
+  ],
+  "gloss": "In co-evolving niches, adapting keeps you in place rather than moving you ahead",
+  "handle": "RedQueenRace",
+  "invariants": [
+    "The niche changes because of the occupants' own adaptations, not only from outside",
+    "Stopping adaptation lowers relative fitness even if absolute performance is unchanged"
+  ],
+  "mechanism": "Predators, prey, parasites, competitors and pathogens adapt to one another at the same time. Each adaptation changes the niche the others occupy, so fitness gained by one party is cancelled by the others' response. Extinction risk stays roughly constant over time: no strategy wins permanently, though better and worse strategies still exist.",
+  "sema_category": "Dynamics",
+  "sema_id": "sema:RedQueenRace#mh:SHA-256:4c871b1148541320528ef16af91edb90e5a16a5d4f27ea4e136e897d1a30922e",
+  "sema_layer": "Physics",
+  "sema_ref": "RedQueenRace#4c87",
+  "sema_stub": "4c87"
+}

@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "path": [
+      "Mind",
+      "Reasoning"
+    ],
+    "ring": 2,
+    "tier": 3
+  },
+  "failure_modes": [
+    "Lapse of awareness returns behavior to habit",
+    "Confusing comfort with contentment"
+  ],
+  "gloss": "Before each action, sense whether it moves toward contentment or toward agitation",
+  "handle": "FeltDirectionCheck",
+  "invariants": [
+    "The signal is subjective and cannot be measured externally",
+    "Practice is continuous, not one-time"
+  ],
+  "mechanism": "Before choosing an action, judge by felt experience which of the available options moves toward a state of contentment or bliss and which moves toward restlessness or inertia. Repeated across many actions this shifts the habitual state toward the ideal state. It works only while awareness is maintained, since lapses return the person to habit.",
+  "sema_category": "Reasoning",
+  "sema_id": "sema:FeltDirectionCheck#mh:SHA-256:eab6b3bd654eda691cc595b523afff3a219498a5dc11ea0fcc84af5290a03dc4",
+  "sema_layer": "Mind",
+  "sema_ref": "FeltDirectionCheck#eab6",
+  "sema_stub": "eab6"
+}
